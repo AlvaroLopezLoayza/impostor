@@ -10,12 +10,16 @@ class BuildGameParams {
   final int impostorCount;
   final ImpostorMode impostorMode;
   final Difficulty difficulty;
+  final List<String>? playerNames;
+  final String? selectedCategoryName;
 
   const BuildGameParams({
     required this.playerCount,
     required this.impostorCount,
     this.impostorMode = ImpostorMode.none,
     this.difficulty = Difficulty.easy,
+    this.playerNames,
+    this.selectedCategoryName,
   });
 }
 
@@ -49,13 +53,22 @@ class BuildGameUseCase {
       throw const GameFailure('No hay categorías disponibles.');
     }
 
-    // 1. Pick a random category (avoid empty ones)
+    // 1. Pick a category
     final validCategories =
         categories.where((c) => c.words.length >= 2).toList();
     if (validCategories.isEmpty) {
       throw const GameFailure('Las categorías no tienen suficientes palabras.');
     }
-    final category = validCategories[_random.nextInt(validCategories.length)];
+    
+    Category? category;
+    if (params.selectedCategoryName != null && params.selectedCategoryName != 'Aleatoria') {
+      category = validCategories.firstWhere(
+        (c) => c.name.toLowerCase() == params.selectedCategoryName!.toLowerCase(),
+        orElse: () => throw GameFailure("La categoría '${params.selectedCategoryName}' no se encontró o no tiene suficientes palabras."),
+      );
+    }
+    
+    category ??= validCategories[_random.nextInt(validCategories.length)];
 
     // 2. Pick a base word, avoiding recently used ones
     final candidates = category.words
@@ -87,8 +100,18 @@ class BuildGameUseCase {
     // 5. Build PlayerCards
     final cards = List.generate(params.playerCount, (i) {
       final isImpostor = impostorIndexes.contains(i);
+      
+      String pName = '';
+      if (params.playerNames != null && i < params.playerNames!.length) {
+        pName = params.playerNames![i].trim();
+      }
+      if (pName.isEmpty) {
+        pName = 'Jugador ${i + 1}';
+      }
+
       return PlayerCard(
         playerIndex: i,
+        playerName: pName,
         isImpostor: isImpostor,
         assignedWord: isImpostor ? impostorWord : selectedWord.base,
       );

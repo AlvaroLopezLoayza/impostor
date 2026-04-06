@@ -140,4 +140,43 @@ void main() {
       expect(indexes.every((i) => i >= 0 && i < playerCount), isTrue);
     });
   });
+
+  group('BuildGameUseCase — new config features', () {
+    test('uses only the selected category when specified', () async {
+      const selectedCategory = 'Animales';
+      final session = await useCase(const BuildGameParams(
+        playerCount: 3,
+        impostorCount: 1,
+        selectedCategoryName: selectedCategory,
+      ));
+
+      // Ensure the chosen word belongs to the specified category
+      final targetCategory = _testCategories.firstWhere((c) => c.name == selectedCategory);
+      final validWords = targetCategory.words.map((w) => w.base).toList();
+      expect(validWords, contains(session.correctWord));
+    });
+
+    test('assigns custom player names correctly and falls back to Jugador X', () async {
+      final customNames = ['Alvaro', 'Antigravity'];
+      final session = await useCase(BuildGameParams(
+        playerCount: 3,
+        impostorCount: 1,
+        playerNames: customNames,
+      ));
+
+      expect(session.cards[0].playerName, 'Alvaro');
+      expect(session.cards[1].playerName, 'Antigravity');
+      expect(session.cards[2].playerName, 'Jugador 3');
+    });
+
+    test('throws failure when selected category is not found', () async {
+      final call = useCase(const BuildGameParams(
+        playerCount: 3,
+        impostorCount: 1,
+        selectedCategoryName: 'NonExistent',
+      ));
+      
+      await expectLater(call, throwsA(isA<GameFailure>()));
+    });
+  });
 }

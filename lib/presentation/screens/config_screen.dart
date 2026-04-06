@@ -53,7 +53,9 @@ class ConfigScreen extends ConsumerWidget {
                       children: [
                         // ── Players ────────────────────────────────────────
                         Consumer(builder: (context, ref, _) {
-                          final count = ref.watch(gameProvider.select((s) => s.config.playerCount));
+                          final config = ref.watch(gameProvider.select((s) => s.config));
+                          final count = config.playerCount;
+                          
                           return _SectionCard(
                             icon: Icons.people_rounded,
                             title: 'Jugadores',
@@ -64,16 +66,89 @@ class ConfigScreen extends ConsumerWidget {
                                 fontWeight: FontWeight.w900,
                               ),
                             ),
-                            child: Semantics(
-                              label: 'Ajustar número de jugadores',
-                              value: '$count',
-                              child: Slider(
-                                value: count.toDouble(),
-                                min: 2,
-                                max: 12,
-                                divisions: 10,
-                                onChanged: (v) => notifier.setPlayerCount(v.round()),
-                              ),
+                            child: Column(
+                              children: [
+                                Semantics(
+                                  label: 'Ajustar número de jugadores',
+                                  value: '$count',
+                                  child: Slider(
+                                    value: count.toDouble(),
+                                    min: 2,
+                                    max: 12,
+                                    divisions: 10,
+                                    onChanged: (v) => notifier.setPlayerCount(v.round()),
+                                  ),
+                                ),
+                                const SizedBox(height: 8),
+                                Theme(
+                                  data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+                                  child: ExpansionTile(
+                                    title: Text('Nombres de jugadores', style: textTheme.bodyLarge),
+                                    tilePadding: EdgeInsets.zero,
+                                    childrenPadding: const EdgeInsets.only(top: 8),
+                                    children: List.generate(count, (index) {
+                                      final pName = (index < config.playerNames.length) ? config.playerNames[index] : '';
+                                      return Padding(
+                                        padding: const EdgeInsets.only(bottom: 8.0),
+                                        child: TextFormField(
+                                          initialValue: pName,
+                                          style: textTheme.bodyMedium,
+                                          decoration: InputDecoration(
+                                            isDense: true,
+                                            labelText: 'Jugador ${index + 1}',
+                                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                                            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                                          ),
+                                          onChanged: (val) => notifier.setPlayerName(index, val),
+                                        ),
+                                      );
+                                    }),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          );
+                        }),
+                        const SizedBox(height: 16),
+
+                        // ── Category Selector ──────────────────────────────────────
+                        Consumer(builder: (context, ref, _) {
+                          final categoriesAsync = ref.watch(categoriesProvider);
+                          final selectedCategory = ref.watch(gameProvider.select((s) => s.config.selectedCategoryName));
+                          
+                          return _SectionCard(
+                            icon: Icons.category_rounded,
+                            title: 'Categoría',
+                            child: categoriesAsync.when(
+                              data: (categories) {
+                                final validCategories = categories.where((c) => c.words.length >= 2).toList();
+                                final List<String> catNames = validCategories.map((c) => c.name).toList();
+                                
+                                return DropdownButtonFormField<String?>(
+                                  value: catNames.contains(selectedCategory) ? selectedCategory : null,
+                                  isExpanded: true,
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                                    contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                                  ),
+                                  hint: const Text('Aleatoria'),
+                                  items: [
+                                    const DropdownMenuItem<String?>(
+                                      value: null,
+                                      child: Text('Aleatoria'),
+                                    ),
+                                    ...catNames.map((name) {
+                                      return DropdownMenuItem<String?>(
+                                        value: name,
+                                        child: Text(name),
+                                      );
+                                    }),
+                                  ],
+                                  onChanged: (val) => notifier.setCategory(val),
+                                );
+                              },
+                              loading: () => const Center(child: CircularProgressIndicator()),
+                              error: (err, stack) => const Text('Error al cargar categorías', style: TextStyle(color: AppTheme.danger)),
                             ),
                           );
                         }),

@@ -24,6 +24,7 @@ class Word {
 /// Domain entity — a player's assigned card for one round
 class PlayerCard {
   final int playerIndex;
+  final String playerName;
   final bool isImpostor;
 
   /// The word shown on screen. Null when impostor gets no word.
@@ -31,6 +32,7 @@ class PlayerCard {
 
   const PlayerCard({
     required this.playerIndex,
+    required this.playerName,
     required this.isImpostor,
     this.assignedWord,
   });

@@ -1,7 +1,10 @@
 /// Base failure class — all typed failures extend this
-sealed class Failure {
+sealed class Failure implements Exception {
   final String message;
   const Failure(this.message);
+
+  @override
+  String toString() => message;
 }
 
 /// Remote data source failure (network, HTTP error)

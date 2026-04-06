@@ -64,25 +64,28 @@ class DiscussionScreen extends ConsumerWidget {
                           runSpacing: 8,
                           children: List.generate(
                             session.playerCount,
-                            (i) => Chip(
-                              avatar: CircleAvatar(
-                                backgroundColor: AppTheme.primary.withAlpha(50),
-                                child: Text(
-                                  '${i + 1}',
-                                  style: const TextStyle(
-                                    fontSize: 12,
-                                    color: AppTheme.primary,
-                                    fontWeight: FontWeight.bold,
+                            (i) {
+                              final pName = session.cards[i].playerName;
+                              return Chip(
+                                avatar: CircleAvatar(
+                                  backgroundColor: AppTheme.primary.withAlpha(50),
+                                  child: Text(
+                                    '${i + 1}',
+                                    style: const TextStyle(
+                                      fontSize: 12,
+                                      color: AppTheme.primary,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              label: Text('Jugador ${i + 1}'),
-                              backgroundColor: AppTheme.surfaceHigh,
-                              side: const BorderSide(color: AppTheme.border),
-                              labelStyle: const TextStyle(
-                                color: AppTheme.textPrimary,
-                              ),
-                            ),
+                                label: Text(pName),
+                                backgroundColor: AppTheme.surfaceHigh,
+                                side: const BorderSide(color: AppTheme.border),
+                                labelStyle: const TextStyle(
+                                  color: AppTheme.textPrimary,
+                                ),
+                              );
+                            },
                           ),
                         ),
                       ],

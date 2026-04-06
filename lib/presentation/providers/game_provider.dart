@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../core/errors/failures.dart';
 import '../../domain/entities/game_entities.dart';
 import '../../domain/usecases/build_game_usecase.dart';
 import 'categories_provider.dart';
@@ -10,12 +11,16 @@ class GameConfig {
   final int impostorCount;
   final ImpostorMode impostorMode;
   final Difficulty difficulty;
+  final List<String> playerNames;
+  final String? selectedCategoryName;
 
   const GameConfig({
     this.playerCount = 4,
     this.impostorCount = 1,
     this.impostorMode = ImpostorMode.none,
     this.difficulty = Difficulty.easy,
+    this.playerNames = const ['', '', '', ''],
+    this.selectedCategoryName,
   });
 
   GameConfig copyWith({
@@ -23,12 +28,17 @@ class GameConfig {
     int? impostorCount,
     ImpostorMode? impostorMode,
     Difficulty? difficulty,
+    List<String>? playerNames,
+    String? selectedCategoryName,
+    bool clearCategory = false,
   }) {
     return GameConfig(
       playerCount: playerCount ?? this.playerCount,
       impostorCount: impostorCount ?? this.impostorCount,
       impostorMode: impostorMode ?? this.impostorMode,
       difficulty: difficulty ?? this.difficulty,
+      playerNames: playerNames ?? this.playerNames,
+      selectedCategoryName: clearCategory ? null : (selectedCategoryName ?? this.selectedCategoryName),
     );
   }
 }
@@ -91,10 +101,37 @@ class GameNotifier extends Notifier<GameState> {
   void setPlayerCount(int count) {
     final maxImpostors = (count / 3).floor().clamp(1, 3);
     final newImpostorCount = state.config.impostorCount.clamp(1, maxImpostors);
+    
+    // Adjust player names list
+    List<String> newNames = List.from(state.config.playerNames);
+    if (count > newNames.length) {
+      newNames.addAll(List.generate(count - newNames.length, (_) => ''));
+    } else if (count < newNames.length) {
+      newNames = newNames.sublist(0, count);
+    }
+    
     state = state.copyWith(
       config: state.config.copyWith(
         playerCount: count,
         impostorCount: newImpostorCount,
+        playerNames: newNames,
+      ),
+    );
+  }
+
+  void setPlayerName(int index, String name) {
+    final newNames = List<String>.from(state.config.playerNames);
+    if (index >= 0 && index < newNames.length) {
+      newNames[index] = name;
+      state = state.copyWith(config: state.config.copyWith(playerNames: newNames));
+    }
+  }
+
+  void setCategory(String? categoryName) {
+    state = state.copyWith(
+      config: state.config.copyWith(
+        selectedCategoryName: categoryName,
+        clearCategory: categoryName == null,
       ),
     );
   }
@@ -124,6 +161,8 @@ class GameNotifier extends Notifier<GameState> {
           impostorCount: state.config.impostorCount,
           impostorMode: state.config.impostorMode,
           difficulty: state.config.difficulty,
+          playerNames: state.config.playerNames,
+          selectedCategoryName: state.config.selectedCategoryName,
         ),
       );
       state = state.copyWith(
@@ -133,10 +172,15 @@ class GameNotifier extends Notifier<GameState> {
         votes: {},
         isLoading: false,
       );
+    } on Failure catch (e) {
+      state = state.copyWith(
+        isLoading: false,
+        error: e.message,
+      );
     } catch (e) {
       state = state.copyWith(
         isLoading: false,
-        error: e.toString().replaceFirst('GameFailure: ', '').replaceFirst('Exception: ', ''),
+        error: "Ocurrió un error inesperado.",
       );
     }
   }

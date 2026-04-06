@@ -15,8 +15,9 @@ class PassPhoneScreen extends ConsumerWidget {
     final gameState = ref.watch(gameProvider);
     final notifier = ref.read(gameProvider.notifier);
     final textTheme = Theme.of(context).textTheme;
-    final playerNum = gameState.currentPlayerIndex + 1;
+    final currentPlayerIndex = gameState.currentPlayerIndex;
     final total = gameState.session?.playerCount ?? 0;
+    final playerName = gameState.session?.cards[currentPlayerIndex].playerName ?? 'Jugador ${currentPlayerIndex + 1}';
 
     return Scaffold(
       body: Stack(
@@ -77,14 +78,14 @@ class PassPhoneScreen extends ConsumerWidget {
                   const SizedBox(height: 32),
 
                   Text(
-                    'Jugador $playerNum',
+                    playerName,
                     style: textTheme.displayMedium?.copyWith(
                       color: AppTheme.primary,
                     ),
                   ),
                   const SizedBox(height: 12),
                   Text(
-                    'Dale el teléfono al\nJugador $playerNum.',
+                    'Dale el teléfono a\n$playerName.',
                     style: textTheme.headlineMedium?.copyWith(
                       color: AppTheme.textSecondary,
                       height: 1.4,

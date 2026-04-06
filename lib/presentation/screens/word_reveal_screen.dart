@@ -61,7 +61,7 @@ class _WordRevealScreenState extends ConsumerState<WordRevealScreen>
                 children: [
                   const SizedBox(height: 24),
                   Text(
-                    'Jugador ${playerIndex + 1}',
+                    card.playerName,
                     style: textTheme.headlineMedium,
                     textAlign: TextAlign.center,
                   ),

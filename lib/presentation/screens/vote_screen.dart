@@ -5,6 +5,7 @@ import '../../core/router/app_router.dart';
 import '../../core/theme/app_theme.dart';
 import '../providers/game_provider.dart';
 import '../widgets/animated_gradient_bg.dart';
+import '../../domain/entities/game_entities.dart';
 
 class VoteScreen extends ConsumerStatefulWidget {
   const VoteScreen({super.key});
@@ -50,7 +51,7 @@ class _VoteScreenState extends ConsumerState<VoteScreen> {
                         const SizedBox(height: 4),
                         if (!allVoted)
                           Text(
-                            'Jugador ${_currentVoter + 1} vota', // who's voting
+                            '${session.cards[_currentVoter].playerName} vota', // who's voting
                             style: textTheme.bodyMedium,
                           ),
                       ],
@@ -73,10 +74,11 @@ class _VoteScreenState extends ConsumerState<VoteScreen> {
                         itemBuilder: (context, i) {
                           if (i == _currentVoter) return const SizedBox.shrink();
                           final selected = _selectedSuspect == i;
+                          final pName = session.cards[i].playerName;
                           return Semantics(
                             button: true,
                             selected: selected,
-                            label: 'Votar por jugador ${i + 1}',
+                            label: 'Votar por $pName',
                             child: GestureDetector(
                               onTap: () =>
                                   setState(() => _selectedSuspect = i),
@@ -115,7 +117,7 @@ class _VoteScreenState extends ConsumerState<VoteScreen> {
                                   ),
                                   const SizedBox(width: 16),
                                   Text(
-                                    'Jugador ${i + 1}',
+                                    session.cards[i].playerName,
                                     style: textTheme.titleLarge?.copyWith(
                                       color: selected
                                           ? AppTheme.textPrimary
@@ -162,7 +164,7 @@ class _VoteScreenState extends ConsumerState<VoteScreen> {
                     const SizedBox(height: 32),
                   ] else ...[
                     // ── Tally ──────────────────────────────────────────
-                    Expanded(child: _VoteTally(votes: _votes, totalPlayers: totalPlayers)),
+                    Expanded(child: _VoteTally(votes: _votes, totalPlayers: totalPlayers, cards: session.cards)),
                     ElevatedButton.icon(
                       icon: const Icon(Icons.bar_chart_rounded),
                       label: const Text('Ver resultado',
@@ -196,7 +198,8 @@ class _VoteScreenState extends ConsumerState<VoteScreen> {
 class _VoteTally extends StatelessWidget {
   final Map<int, int> votes;
   final int totalPlayers;
-  const _VoteTally({required this.votes, required this.totalPlayers});
+  final List<PlayerCard> cards;
+  const _VoteTally({required this.votes, required this.totalPlayers, required this.cards});
 
   @override
   Widget build(BuildContext context) {
@@ -226,7 +229,7 @@ class _VoteTally extends StatelessWidget {
                 children: [
                   SizedBox(
                     width: 80,
-                    child: Text('Jugador ${i + 1}',
+                    child: Text(cards[i].playerName,
                         style: textTheme.bodyLarge),
                   ),
                   const SizedBox(width: 8),

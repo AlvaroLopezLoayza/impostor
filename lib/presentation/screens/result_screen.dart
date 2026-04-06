@@ -160,7 +160,7 @@ class _ResultScreenState extends ConsumerState<ResultScreen>
                                 style: textTheme.bodyMedium),
                             const SizedBox(height: 8),
                             Text(
-                              'Jugador ${eliminatedIndex + 1}',
+                              eliminatedCard.playerName,
                               style: textTheme.headlineMedium?.copyWith(
                                 color: eliminatedCard.isImpostor
                                     ? AppTheme.danger
@@ -226,7 +226,7 @@ class _ResultScreenState extends ConsumerState<ResultScreen>
                                 ? 'El impostor era'
                                 : 'Los impostores eran',
                             value: impostorIndexes
-                                .map((i) => 'Jugador ${i + 1}')
+                                .map((i) => session.cards[i].playerName)
                                 .join(', '),
                             valueColor: AppTheme.accent,
                           ),
