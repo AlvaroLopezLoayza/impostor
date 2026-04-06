@@ -1,0 +1,109 @@
+{
+  "version": "1.0.0",
+  "categorias": [
+    {
+      "nombre": "Animales",
+      "palabras": [
+        { "base": "perro", "sinonimos": ["can", "mascota", "animal doméstico", "chucho"] },
+        { "base": "gato", "sinonimos": ["felino", "minino", "michi", "gatito"] },
+        { "base": "elefante", "sinonimos": ["paquidermo", "bestia gris", "proboscídeo"] },
+        { "base": "delfín", "sinonimos": ["mamífero marino", "cetáceo", "tursiops"] },
+        { "base": "águila", "sinonimos": ["rapaz", "ave de presa", "raptor"] },
+        { "base": "serpiente", "sinonimos": ["reptil", "víbora", "culebra", "ofidio"] },
+        { "base": "tigre", "sinonimos": ["felino rayado", "pantera tigris", "gran felino"] },
+        { "base": "mariposa", "sinonimos": ["lepidóptero", "insecto alado", "polilla diurna"] }
+      ]
+    },
+    {
+      "nombre": "Comida",
+      "palabras": [
+        { "base": "pizza", "sinonimos": ["italiana redonda", "masa con queso", "horneado napolitano"] },
+        { "base": "sushi", "sinonimos": ["maki", "nigiri", "roll japonés", "arroz con pescado"] },
+        { "base": "hamburguesa", "sinonimos": ["burger", "sandwich de carne", "bocadillo americano"] },
+        { "base": "tacos", "sinonimos": ["tortilla con relleno", "antojito mexicano", "taquitos"] },
+        { "base": "paella", "sinonimos": ["arroz valenciano", "arroz con mariscos", "plato español"] },
+        { "base": "chocolate", "sinonimos": ["cacao", "dulce oscuro", "bombón"] },
+        { "base": "helado", "sinonimos": ["nieve", "gelatina fría", "paleta", "sorbet"] },
+        { "base": "empanada", "sinonimos": ["pastel de masa", "calzone", "empanadilla"] }
+      ]
+    },
+    {
+      "nombre": "Deportes",
+      "palabras": [
+        { "base": "fútbol", "sinonimos": ["balompié", "soccer", "el deporte rey"] },
+        { "base": "natación", "sinonimos": ["nado", "deporte acuático", "piscina"] },
+        { "base": "tenis", "sinonimos": ["raqueta", "deporte de pista", "pelota amarilla"] },
+        { "base": "boxeo", "sinonimos": ["pugilismo", "pelea de guantes", "combate"] },
+        { "base": "ciclismo", "sinonimos": ["bicicleta", "pedaleo", "vuelta en bici"] },
+        { "base": "baloncesto", "sinonimos": ["básquet", "basketball", "deporte de canasta"] },
+        { "base": "golf", "sinonimos": ["deporte de hoyo", "juego de palo", "pitch and putt"] },
+        { "base": "surf", "sinonimos": ["tabla en las olas", "deporte de mar", "paddle surf"] }
+      ]
+    },
+    {
+      "nombre": "Profesiones",
+      "palabras": [
+        { "base": "médico", "sinonimos": ["doctor", "galeno", "especialista de salud"] },
+        { "base": "maestro", "sinonimos": ["profesor", "docente", "educador"] },
+        { "base": "bombero", "sinonimos": ["apagafuegos", "rescatista", "extintor humano"] },
+        { "base": "chef", "sinonimos": ["cocinero profesional", "culinario", "gourmet"] },
+        { "base": "astronauta", "sinonimos": ["cosmonauta", "viajero espacial", "tripulante orbital"] },
+        { "base": "abogado", "sinonimos": ["jurista", "letrado", "defensor legal"] },
+        { "base": "arquitecto", "sinonimos": ["diseñador de edificios", "urbanista", "proyectista"] },
+        { "base": "piloto", "sinonimos": ["aviador", "comandante de vuelo", "aeronauta"] }
+      ]
+    },
+    {
+      "nombre": "Lugares",
+      "palabras": [
+        { "base": "playa", "sinonimos": ["costa", "litoral", "arena y mar", "ribera"] },
+        { "base": "montaña", "sinonimos": ["cumbre", "cerro", "cordillera", "pico"] },
+        { "base": "aeropuerto", "sinonimos": ["terminal aérea", "pista de aterrizaje", "hub de vuelos"] },
+        { "base": "museo", "sinonimos": ["galería", "exposición cultural", "pinacoteca"] },
+        { "base": "mercado", "sinonimos": ["bazar", "tianguis", "feria", "plaza"] },
+        { "base": "hospital", "sinonimos": ["clínica", "centro médico", "nosocomio"] },
+        { "base": "biblioteca", "sinonimos": ["sala de libros", "hemeroteca", "mediateca"] },
+        { "base": "estadio", "sinonimos": ["coliseo", "arena deportiva", "cancha grande"] }
+      ]
+    },
+    {
+      "nombre": "Películas",
+      "palabras": [
+        { "base": "El Rey León", "sinonimos": ["rey de la sabana", "simba", "animación del desierto"] },
+        { "base": "Titanic", "sinonimos": ["el barco que se hunde", "historia del iceberg", "leo di caprio en el mar"] },
+        { "base": "Avatar", "sinonimos": ["los azules del planeta", "pandora", "na'vi"] },
+        { "base": "Matrix", "sinonimos": ["la pastilla roja", "neo", "realidad simulada"] },
+        { "base": "Frozen", "sinonimos": ["let it go", "elsa y anna", "reino del hielo"] },
+        { "base": "Interstellar", "sinonimos": ["agujero negro", "viaje en el tiempo", "gravedad y amor"] },
+        { "base": "Coco", "sinonimos": ["día de muertos", "miguel y su guitarra", "tierra de los muertos"] },
+        { "base": "Up", "sinonimos": ["la casa de los globos", "viejo aventurero", "carl y russell"] }
+      ]
+    },
+    {
+      "nombre": "Objetos",
+      "palabras": [
+        { "base": "teléfono", "sinonimos": ["celular", "smartphone", "móvil", "aparato"] },
+        { "base": "reloj", "sinonimos": ["cronómetro", "indicador de tiempo", "temporizador"] },
+        { "base": "espejo", "sinonimos": ["reflector", "luna", "cristal que devuelve imagen"] },
+        { "base": "llave", "sinonimos": ["abre puertas", "instrumento de cerradura", "acceso"] },
+        { "base": "sombrilla", "sinonimos": ["paraguas", "quitasol", "protector de lluvia"] },
+        { "base": "cámara", "sinonimos": ["fotografiadora", "captor de imágenes", "reflex"] },
+        { "base": "mochila", "sinonimos": ["morral", "bolsa de hombro", "mochilón"] },
+        { "base": "linterna", "sinonimos": ["lámpara portátil", "foco de mano", "luz de emergencia"] }
+      ]
+    },
+    {
+      "nombre": "Tecnología",
+      "palabras": [
+        { "base": "robot", "sinonimos": ["autómata", "máquina inteligente", "androide"] },
+        { "base": "satélite", "sinonimos": ["objeto orbital", "artefacto espacial", "relé en órbita"] },
+        { "base": "internet", "sinonimos": ["la red", "nube global", "autopista de información"] },
+        { "base": "inteligencia artificial", "sinonimos": ["IA", "algoritmo pensante", "cerebro digital"] },
+        { "base": "impresora 3D", "sinonimos": ["fabricadora de capas", "modeladora por extrusión", "prototipadora"] },
+        { "base": "dron", "sinonimos": ["cuadricóptero", "vehículo aéreo no tripulado", "UAV"] },
+        { "base": "blockchain", "sinonimos": ["cadena de bloques", "libro contable distribuido", "cripto-registro"] },
+        { "base": "realidad virtual", "sinonimos": ["VR", "simulación inmersiva", "mundo digital 3D"] }
+      ]
+    }
+  ]
+}
