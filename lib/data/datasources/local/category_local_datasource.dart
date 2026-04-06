@@ -1,9 +1,19 @@
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../../core/constants/app_constants.dart';
 import '../../../core/errors/failures.dart';
 
-/// Manages local JSON cache using SharedPreferences with TTL.
+/// Manages local JSON data from assets and cache using SharedPreferences.
 class CategoryLocalDataSource {
+  /// Loads the bundled categories from assets.
+  Future<String> getAssetJson() async {
+    try {
+      return await rootBundle.loadString('assets/categories.json');
+    } catch (e) {
+      throw const CacheFailure('No se pudo cargar el archivo de activos.');
+    }
+  }
+
   Future<String> getCachedJson() async {
     final prefs = await SharedPreferences.getInstance();
     final tsStr = prefs.getString(AppConstants.cacheTsKey);
