@@ -13,11 +13,9 @@ class ConfigScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final gameState = ref.watch(gameProvider);
-    final config = gameState.config;
-    final notifier = ref.read(gameProvider.notifier);
     final textTheme = Theme.of(context).textTheme;
-    final maxImpostors = (config.playerCount / 3).floor().clamp(1, 3);
+    // We only read the provider here to avoid rebuilding the whole screen when sliders drag
+    final notifier = ref.read(gameProvider.notifier);
 
     return Scaffold(
       body: Stack(
@@ -54,142 +52,175 @@ class ConfigScreen extends ConsumerWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         // ── Players ────────────────────────────────────────
-                        _SectionCard(
-                          icon: Icons.people_rounded,
-                          title: 'Jugadores',
-                          trailing: Text(
-                            '${config.playerCount}',
-                            style: textTheme.headlineMedium?.copyWith(
-                              color: AppTheme.primary,
-                              fontWeight: FontWeight.w900,
+                        Consumer(builder: (context, ref, _) {
+                          final count = ref.watch(gameProvider.select((s) => s.config.playerCount));
+                          return _SectionCard(
+                            icon: Icons.people_rounded,
+                            title: 'Jugadores',
+                            trailing: Text(
+                              '$count',
+                              style: textTheme.headlineMedium?.copyWith(
+                                color: AppTheme.primary,
+                                fontWeight: FontWeight.w900,
+                              ),
                             ),
-                          ),
-                          child: Slider(
-                            value: config.playerCount.toDouble(),
-                            min: 2,
-                            max: 12,
-                            divisions: 10,
-                            onChanged: (v) => notifier.setPlayerCount(v.round()),
-                          ),
-                        ),
+                            child: Semantics(
+                              label: 'Ajustar número de jugadores',
+                              value: '$count',
+                              child: Slider(
+                                value: count.toDouble(),
+                                min: 2,
+                                max: 12,
+                                divisions: 10,
+                                onChanged: (v) => notifier.setPlayerCount(v.round()),
+                              ),
+                            ),
+                          );
+                        }),
                         const SizedBox(height: 16),
 
                         // ── Impostors ──────────────────────────────────────
-                        _SectionCard(
-                          icon: Icons.psychology_alt_rounded,
-                          title: 'Impostores',
-                          trailing: Text(
-                            '${config.impostorCount}',
-                            style: textTheme.headlineMedium?.copyWith(
-                              color: AppTheme.accent,
-                              fontWeight: FontWeight.w900,
+                        Consumer(builder: (context, ref, _) {
+                          final config = ref.watch(gameProvider.select((s) => s.config));
+                          final maxImpostors = (config.playerCount / 3).floor().clamp(1, 3);
+                          return _SectionCard(
+                            icon: Icons.psychology_alt_rounded,
+                            title: 'Impostores',
+                            trailing: Text(
+                              '${config.impostorCount}',
+                              style: textTheme.headlineMedium?.copyWith(
+                                color: AppTheme.accent,
+                                fontWeight: FontWeight.w900,
+                              ),
                             ),
-                          ),
-                          child: Slider(
-                            value: config.impostorCount.toDouble(),
-                            min: 1,
-                            max: maxImpostors.toDouble(),
-                            divisions: (maxImpostors - 1).clamp(1, 10),
-                            onChanged: (v) => notifier.setImpostorCount(v.round()),
-                          ),
-                        ),
+                            child: Semantics(
+                              label: 'Ajustar número de impostores',
+                              value: '${config.impostorCount}',
+                              child: Slider(
+                                value: config.impostorCount.toDouble(),
+                                min: 1,
+                                max: maxImpostors.toDouble(),
+                                divisions: (maxImpostors - 1).clamp(1, 10),
+                                onChanged: (v) => notifier.setImpostorCount(v.round()),
+                              ),
+                            ),
+                          );
+                        }),
                         const SizedBox(height: 16),
 
                         // ── Difficulty ─────────────────────────────────────
-                        _SectionCard(
-                          icon: Icons.bolt_rounded,
-                          title: 'Dificultad',
-                          child: Row(
-                            children: [
-                              _DiffChip(
-                                label: 'Fácil',
-                                selected: config.difficulty == Difficulty.easy,
-                                onTap: () => notifier.setDifficulty(Difficulty.easy),
-                              ),
-                              const SizedBox(width: 12),
-                              _DiffChip(
-                                label: 'Difícil',
-                                selected: config.difficulty == Difficulty.hard,
-                                color: AppTheme.danger,
-                                onTap: () => notifier.setDifficulty(Difficulty.hard),
-                              ),
-                            ],
-                          ),
-                        ),
-                        const SizedBox(height: 16),
-
-                        // ── Impostor Mode ──────────────────────────────────
-                        _SectionCard(
-                          icon: Icons.help_outline_rounded,
-                          title: 'Pista para el impostor',
-                          subtitle: 'El impostor recibe...',
-                          child: Column(
-                            children: [
-                              _ModeOption(
-                                label: 'Nada — solo sabe que es impostor',
-                                selected: config.impostorMode == ImpostorMode.none,
-                                onTap: () => notifier.setImpostorMode(ImpostorMode.none),
-                              ),
-                              const SizedBox(height: 8),
-                              _ModeOption(
-                                label: 'Una palabra diferente de la misma categoría',
-                                selected: config.impostorMode == ImpostorMode.differentWord,
-                                onTap: () => notifier.setImpostorMode(ImpostorMode.differentWord),
-                              ),
-                            ],
-                          ),
-                        ),
-                        const SizedBox(height: 32),
-
-                        // ── Error message ──────────────────────────────────
-                        if (gameState.error != null) ...[
-                          Container(
-                            padding: const EdgeInsets.all(16),
-                            decoration: BoxDecoration(
-                              color: AppTheme.danger.withAlpha(30),
-                              borderRadius: BorderRadius.circular(12),
-                              border: Border.all(color: AppTheme.danger.withAlpha(80)),
-                            ),
+                        Consumer(builder: (context, ref, _) {
+                          final difficulty = ref.watch(gameProvider.select((s) => s.config.difficulty));
+                          return _SectionCard(
+                            icon: Icons.bolt_rounded,
+                            title: 'Dificultad',
                             child: Row(
                               children: [
-                                const Icon(Icons.error_outline, color: AppTheme.danger, size: 20),
-                                const SizedBox(width: 10),
-                                Expanded(
-                                  child: Text(
-                                    gameState.error!,
-                                    style: textTheme.bodyMedium?.copyWith(
-                                      color: AppTheme.danger,
-                                    ),
-                                  ),
+                                _DiffChip(
+                                  label: 'Fácil',
+                                  selected: difficulty == Difficulty.easy,
+                                  onTap: () => notifier.setDifficulty(Difficulty.easy),
+                                ),
+                                const SizedBox(width: 12),
+                                _DiffChip(
+                                  label: 'Difícil',
+                                  selected: difficulty == Difficulty.hard,
+                                  color: AppTheme.danger,
+                                  onTap: () => notifier.setDifficulty(Difficulty.hard),
                                 ),
                               ],
                             ),
-                          ),
-                          const SizedBox(height: 16),
-                        ],
+                          );
+                        }),
+                        const SizedBox(height: 16),
+
+                        // ── Impostor Mode ──────────────────────────────────
+                        Consumer(builder: (context, ref, _) {
+                          final mode = ref.watch(gameProvider.select((s) => s.config.impostorMode));
+                          return _SectionCard(
+                            icon: Icons.help_outline_rounded,
+                            title: 'Pista para el impostor',
+                            subtitle: 'El impostor recibe...',
+                            child: Column(
+                              children: [
+                                _ModeOption(
+                                  label: 'Nada — solo sabe que es impostor',
+                                  selected: mode == ImpostorMode.none,
+                                  onTap: () => notifier.setImpostorMode(ImpostorMode.none),
+                                ),
+                                const SizedBox(height: 8),
+                                _ModeOption(
+                                  label: 'Una palabra diferente de la misma categoría',
+                                  selected: mode == ImpostorMode.differentWord,
+                                  onTap: () => notifier.setImpostorMode(ImpostorMode.differentWord),
+                                ),
+                              ],
+                            ),
+                          );
+                        }),
+                        const SizedBox(height: 32),
+
+                        // ── Error message ──────────────────────────────────
+                        Consumer(builder: (context, ref, _) {
+                          final error = ref.watch(gameProvider.select((s) => s.error));
+                          if (error == null) return const SizedBox.shrink();
+                          
+                          return Padding(
+                            padding: const EdgeInsets.only(bottom: 16.0),
+                            child: Container(
+                              padding: const EdgeInsets.all(16),
+                              decoration: BoxDecoration(
+                                color: AppTheme.danger.withAlpha(30),
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(color: AppTheme.danger.withAlpha(80)),
+                              ),
+                              child: Row(
+                                children: [
+                                  const Icon(Icons.error_outline, color: AppTheme.danger, size: 20),
+                                  const SizedBox(width: 10),
+                                  Expanded(
+                                    child: Text(
+                                      error,
+                                      style: textTheme.bodyMedium?.copyWith(
+                                        color: AppTheme.danger,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        }),
 
                         // ── Start Button ───────────────────────────────────
-                        _StartButton(
-                          isLoading: gameState.isLoading,
-                          onTap: () async {
-                            await notifier.startGame();
-                            if (context.mounted && ref.read(gameProvider).error == null) {
-                              context.go(AppRouter.passPhone);
-                            }
-                          },
-                        ),
+                        Consumer(builder: (context, ref, _) {
+                          final isLoading = ref.watch(gameProvider.select((s) => s.isLoading));
+                          return _StartButton(
+                            isLoading: isLoading,
+                            onTap: () async {
+                              await notifier.startGame();
+                              if (context.mounted && ref.read(gameProvider).error == null) {
+                                context.go(AppRouter.passPhone);
+                              }
+                            },
+                          );
+                        }),
                         const SizedBox(height: 8),
 
                         // ── Refresh categories ─────────────────────────────
                         Center(
-                          child: TextButton.icon(
-                            icon: const Icon(Icons.refresh_rounded, size: 16),
-                            label: const Text('Actualizar palabras'),
-                            style: TextButton.styleFrom(
-                              foregroundColor: AppTheme.textSecondary,
+                          child: Semantics(
+                            button: true,
+                            label: 'Forzar actualización de palabras desde GitHub',
+                            child: TextButton.icon(
+                              icon: const Icon(Icons.refresh_rounded, size: 16),
+                              label: const Text('Actualizar palabras'),
+                              style: TextButton.styleFrom(
+                                foregroundColor: AppTheme.textSecondary,
+                              ),
+                              onPressed: () =>
+                                  ref.read(categoriesProvider.notifier).refresh(),
                             ),
-                            onPressed: () =>
-                                ref.read(categoriesProvider.notifier).refresh(),
                           ),
                         ),
                         const SizedBox(height: 16),
@@ -277,25 +308,30 @@ class _DiffChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: GestureDetector(
-        onTap: onTap,
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 200),
-          padding: const EdgeInsets.symmetric(vertical: 14),
-          decoration: BoxDecoration(
-            color: selected ? color.withAlpha(40) : Colors.transparent,
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(
-              color: selected ? color : AppTheme.border,
-              width: selected ? 2 : 1,
+      child: Semantics(
+        button: true,
+        selected: selected,
+        label: label,
+        child: GestureDetector(
+          onTap: onTap,
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 200),
+            padding: const EdgeInsets.symmetric(vertical: 14),
+            decoration: BoxDecoration(
+              color: selected ? color.withAlpha(40) : Colors.transparent,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(
+                color: selected ? color : AppTheme.border,
+                width: selected ? 2 : 1,
+              ),
             ),
-          ),
-          child: Text(
-            label,
-            textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                  color: selected ? color : AppTheme.textSecondary,
-                ),
+            child: Text(
+              label,
+              textAlign: TextAlign.center,
+              style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                    color: selected ? color : AppTheme.textSecondary,
+                  ),
+            ),
           ),
         ),
       ),
@@ -316,38 +352,43 @@ class _ModeOption extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 200),
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-        decoration: BoxDecoration(
-          color: selected ? AppTheme.primary.withAlpha(30) : Colors.transparent,
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: selected ? AppTheme.primary : AppTheme.border,
-            width: selected ? 1.5 : 1,
+    return Semantics(
+      button: true,
+      selected: selected,
+      label: label,
+      child: GestureDetector(
+        onTap: onTap,
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          decoration: BoxDecoration(
+            color: selected ? AppTheme.primary.withAlpha(30) : Colors.transparent,
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(
+              color: selected ? AppTheme.primary : AppTheme.border,
+              width: selected ? 1.5 : 1,
+            ),
           ),
-        ),
-        child: Row(
-          children: [
-            Icon(
-              selected
-                  ? Icons.radio_button_checked_rounded
-                  : Icons.radio_button_unchecked_rounded,
-              color: selected ? AppTheme.primary : AppTheme.textMuted,
-              size: 20,
-            ),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Text(
-                label,
-                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      color: selected ? AppTheme.textPrimary : AppTheme.textSecondary,
-                    ),
+          child: Row(
+            children: [
+              Icon(
+                selected
+                    ? Icons.radio_button_checked_rounded
+                    : Icons.radio_button_unchecked_rounded,
+                color: selected ? AppTheme.primary : AppTheme.textMuted,
+                size: 20,
               ),
-            ),
-          ],
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text(
+                  label,
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                        color: selected ? AppTheme.textPrimary : AppTheme.textSecondary,
+                      ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -362,19 +403,23 @@ class _StartButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: isLoading ? null : onTap,
-      style: ElevatedButton.styleFrom(
-        padding: const EdgeInsets.symmetric(vertical: 20),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+    return Semantics(
+      button: true,
+      label: 'Comenzar partida',
+      child: ElevatedButton(
+        onPressed: isLoading ? null : onTap,
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.symmetric(vertical: 20),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        ),
+        child: isLoading
+            ? const SizedBox(
+                height: 22,
+                width: 22,
+                child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2.5),
+              )
+            : const Text('¡Comenzar!', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w700)),
       ),
-      child: isLoading
-          ? const SizedBox(
-              height: 22,
-              width: 22,
-              child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2.5),
-            )
-          : const Text('¡Comenzar!', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w700)),
     );
   }
 }

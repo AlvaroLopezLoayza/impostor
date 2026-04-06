@@ -77,9 +77,12 @@ class _WordRevealScreenState extends ConsumerState<WordRevealScreen>
                   const Spacer(flex: 2),
 
                   // ── Word card ─────────────────────────────────────────
-                  GestureDetector(
-                    onTap: _hidden ? _reveal : null,
-                    child: AnimatedContainer(
+                  Semantics(
+                    button: true,
+                    label: _hidden ? 'Revelar palabra' : 'Palabra revelada',
+                    child: GestureDetector(
+                      onTap: _hidden ? _reveal : null,
+                      child: AnimatedContainer(
                       duration: const Duration(milliseconds: 300),
                       width: double.infinity,
                       padding: const EdgeInsets.symmetric(
@@ -129,13 +132,17 @@ class _WordRevealScreenState extends ConsumerState<WordRevealScreen>
                             ),
                     ),
                   ),
+                  ),
 
                   const Spacer(flex: 3),
 
                   if (!_hidden) ...[
-                    ElevatedButton(
-                      onPressed: () {
-                        notifier.doneRevealing();
+                    Semantics(
+                      button: true,
+                      label: 'Listo, pasar al siguiente jugador',
+                      child: ElevatedButton(
+                        onPressed: () {
+                          notifier.doneRevealing();
                         final newState = ref.read(gameProvider);
                         if (newState.phase == GamePhase.discussion) {
                           context.go(AppRouter.discussion);
@@ -152,6 +159,7 @@ class _WordRevealScreenState extends ConsumerState<WordRevealScreen>
                         'Listo — pasar al siguiente',
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.w700),
+                        ),
                       ),
                     ),
                     const SizedBox(height: 32),
@@ -181,7 +189,7 @@ class _HiddenState extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Icon(
+        const Icon(
           Icons.lock_rounded,
           size: 52,
           color: AppTheme.textMuted,

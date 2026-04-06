@@ -102,12 +102,12 @@ void main() {
 
   group('getCategories — filters empty categories', () {
     test('excludes categories with no words', () async {
-      final responseWithEmpty = CategoriesResponse(
+      const responseWithEmpty = CategoriesResponse(
         categorias: [
-          const CategoryModel(nombre: 'Empty', palabras: []),
+          CategoryModel(nombre: 'Empty', palabras: []),
           CategoryModel(
             nombre: 'Valid',
-            palabras: const [WordModel(base: 'oso')],
+            palabras: [WordModel(base: 'oso')],
           ),
         ],
       );

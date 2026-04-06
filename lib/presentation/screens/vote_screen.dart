@@ -73,11 +73,15 @@ class _VoteScreenState extends ConsumerState<VoteScreen> {
                         itemBuilder: (context, i) {
                           if (i == _currentVoter) return const SizedBox.shrink();
                           final selected = _selectedSuspect == i;
-                          return GestureDetector(
-                            onTap: () =>
-                                setState(() => _selectedSuspect = i),
-                            child: AnimatedContainer(
-                              duration: const Duration(milliseconds: 200),
+                          return Semantics(
+                            button: true,
+                            selected: selected,
+                            label: 'Votar por jugador ${i + 1}',
+                            child: GestureDetector(
+                              onTap: () =>
+                                  setState(() => _selectedSuspect = i),
+                              child: AnimatedContainer(
+                                duration: const Duration(milliseconds: 200),
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 20, vertical: 16),
                               decoration: BoxDecoration(
@@ -125,7 +129,7 @@ class _VoteScreenState extends ConsumerState<VoteScreen> {
                                 ],
                               ),
                             ),
-                          );
+                          ));
                         },
                       ),
                     ),

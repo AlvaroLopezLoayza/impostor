@@ -13,7 +13,24 @@ class DioClient {
       receiveTimeout: AppConstants.receiveTimeout,
       headers: {'Accept': 'application/json'},
     ),
-  );
+  )..interceptors.add(
+      InterceptorsWrapper(
+        onResponse: (response, handler) {
+          final contentType = response.headers.value('content-type') ?? '';
+          if (contentType.contains('text/html')) {
+            handler.reject(
+              DioException(
+                requestOptions: response.requestOptions,
+                error: 'Seguridad: Se recibió HTML en lugar de JSON.',
+                type: DioExceptionType.badResponse,
+              ),
+            );
+          } else {
+            handler.next(response);
+          }
+        },
+      ),
+    );
 
   Dio get dio => _dio;
 }

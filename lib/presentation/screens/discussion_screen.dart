@@ -7,52 +7,11 @@ import '../../core/theme/app_theme.dart';
 import '../providers/game_provider.dart';
 import '../widgets/animated_gradient_bg.dart';
 
-class DiscussionScreen extends ConsumerStatefulWidget {
+class DiscussionScreen extends ConsumerWidget {
   const DiscussionScreen({super.key});
 
   @override
-  ConsumerState<DiscussionScreen> createState() => _DiscussionScreenState();
-}
-
-class _DiscussionScreenState extends ConsumerState<DiscussionScreen> {
-  static const _totalSeconds = 180; // 3 minutes
-  late int _remaining = _totalSeconds;
-  Timer? _timer;
-  bool _started = false;
-
-  @override
-  void dispose() {
-    _timer?.cancel();
-    super.dispose();
-  }
-
-  void _startTimer() {
-    setState(() => _started = true);
-    _timer = Timer.periodic(const Duration(seconds: 1), (_) {
-      if (_remaining > 0) {
-        setState(() => _remaining--);
-      } else {
-        _timer?.cancel();
-      }
-    });
-  }
-
-  String get _timeLabel {
-    final minutes = (_remaining ~/ 60).toString().padLeft(2, '0');
-    final seconds = (_remaining % 60).toString().padLeft(2, '0');
-    return '$minutes:$seconds';
-  }
-
-  double get _progress => _remaining / _totalSeconds;
-
-  Color get _timerColor {
-    if (_remaining > 60) return AppTheme.primary;
-    if (_remaining > 30) return AppTheme.accent;
-    return AppTheme.danger;
-  }
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final gameState = ref.watch(gameProvider);
     final notifier = ref.read(gameProvider.notifier);
     final session = gameState.session!;
@@ -82,45 +41,8 @@ class _DiscussionScreenState extends ConsumerState<DiscussionScreen> {
 
                   const SizedBox(height: 40),
 
-                  // ── Timer ring ─────────────────────────────────────────
-                  GestureDetector(
-                    onTap: _started ? null : _startTimer,
-                    child: SizedBox(
-                      width: 180,
-                      height: 180,
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          SizedBox.expand(
-                            child: CircularProgressIndicator(
-                              value: _progress,
-                              strokeWidth: 8,
-                              backgroundColor: AppTheme.border,
-                              color: _timerColor,
-                            ),
-                          ),
-                          Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Text(
-                                _timeLabel,
-                                style: textTheme.displayMedium?.copyWith(
-                                  color: _timerColor,
-                                  fontWeight: FontWeight.w900,
-                                ),
-                              ),
-                              if (!_started)
-                                Text(
-                                  'Toca para\niniciar',
-                                  style: textTheme.bodyMedium,
-                                  textAlign: TextAlign.center,
-                                ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                  // ── Timer ring (Isolated Performance Optimization) ───────
+                  const _TimerRing(),
 
                   const SizedBox(height: 40),
 
@@ -176,7 +98,6 @@ class _DiscussionScreenState extends ConsumerState<DiscussionScreen> {
                         style: TextStyle(
                             fontSize: 17, fontWeight: FontWeight.w700)),
                     onPressed: () {
-                      _timer?.cancel();
                       notifier.startVoting();
                       context.go(AppRouter.vote);
                     },
@@ -192,6 +113,101 @@ class _DiscussionScreenState extends ConsumerState<DiscussionScreen> {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+// ── Timer Ring (Isolated to prevent global UI repaints) ─────────────────────
+
+class _TimerRing extends StatefulWidget {
+  const _TimerRing();
+
+  @override
+  State<_TimerRing> createState() => _TimerRingState();
+}
+
+class _TimerRingState extends State<_TimerRing> {
+  static const _totalSeconds = 180; // 3 minutes
+  late int _remaining = _totalSeconds;
+  Timer? _timer;
+  bool _started = false;
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  void _startTimer() {
+    setState(() => _started = true);
+    _timer = Timer.periodic(const Duration(seconds: 1), (_) {
+      if (_remaining > 0) {
+        setState(() => _remaining--);
+      } else {
+        _timer?.cancel();
+      }
+    });
+  }
+
+  String get _timeLabel {
+    final minutes = (_remaining ~/ 60).toString().padLeft(2, '0');
+    final seconds = (_remaining % 60).toString().padLeft(2, '0');
+    return '$minutes:$seconds';
+  }
+
+  double get _progress => _remaining / _totalSeconds;
+
+  Color get _timerColor {
+    if (_remaining > 60) return AppTheme.primary;
+    if (_remaining > 30) return AppTheme.accent;
+    return AppTheme.danger;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+
+    return Semantics(
+      button: true,
+      label: _started ? 'Temporizador$_timeLabel' : 'Iniciar temporizador',
+      child: GestureDetector(
+        onTap: _started ? null : _startTimer,
+        child: SizedBox(
+          width: 180,
+          height: 180,
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              SizedBox.expand(
+                child: CircularProgressIndicator(
+                  value: _progress,
+                  strokeWidth: 8,
+                  backgroundColor: AppTheme.border,
+                  color: _timerColor,
+                ),
+              ),
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    _timeLabel,
+                    style: textTheme.displayMedium?.copyWith(
+                      color: _timerColor,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                  if (!_started)
+                    Text(
+                      'Toca para\niniciar',
+                      style: textTheme.bodyMedium,
+                      textAlign: TextAlign.center,
+                    ),
+                ],
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

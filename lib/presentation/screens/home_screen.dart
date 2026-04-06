@@ -146,25 +146,29 @@ class _PulsingButtonState extends State<_PulsingButton>
 
   @override
   Widget build(BuildContext context) {
-    return ScaleTransition(
-      scale: _scale,
-      child: ElevatedButton(
-        onPressed: widget.onTap,
-        style: ElevatedButton.styleFrom(
-          padding: const EdgeInsets.symmetric(vertical: 20),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
+    return Semantics(
+      button: true,
+      label: widget.label,
+      child: ScaleTransition(
+        scale: _scale,
+        child: ElevatedButton(
+          onPressed: widget.onTap,
+          style: ElevatedButton.styleFrom(
+            padding: const EdgeInsets.symmetric(vertical: 20),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            backgroundColor: AppTheme.primary,
+            shadowColor: AppTheme.primary.withAlpha(100),
+            elevation: 12,
           ),
-          backgroundColor: AppTheme.primary,
-          shadowColor: AppTheme.primary.withAlpha(100),
-          elevation: 12,
-        ),
-        child: Text(
-          widget.label,
-          style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                color: Colors.white,
-                letterSpacing: 1,
-              ),
+          child: Text(
+            widget.label,
+            style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                  color: Colors.white,
+                  letterSpacing: 1,
+                ),
+          ),
         ),
       ),
     );

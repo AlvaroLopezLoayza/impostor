@@ -101,8 +101,11 @@ class PassPhoneScreen extends ConsumerWidget {
                   const Spacer(flex: 3),
 
                   // ── Reveal CTA ─────────────────────────────────────────
-                  ElevatedButton(
-                    onPressed: () {
+                  Semantics(
+                    button: true,
+                    label: 'Ver mi palabra',
+                    child: ElevatedButton(
+                      onPressed: () {
                       notifier.showWordForCurrentPlayer();
                       context.go(AppRouter.wordReveal);
                     },
@@ -125,6 +128,7 @@ class PassPhoneScreen extends ConsumerWidget {
                         ),
                       ],
                     ),
+                  ),
                   ),
                   const SizedBox(height: 32),
                 ],

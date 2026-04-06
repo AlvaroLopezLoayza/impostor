@@ -11,13 +11,13 @@ class MockCategoryRepository extends Mock implements CategoryRepository {}
 
 // ── Fixture ───────────────────────────────────────────────────────────────────
 
-final _testCategories = [
+const _testCategories = [
   Category(
     name: 'Animales',
     words: [
-      const Word(base: 'perro', synonyms: ['can', 'mascota']),
-      const Word(base: 'gato', synonyms: ['felino', 'minino']),
-      const Word(base: 'lobo', synonyms: ['cánido']),
+      Word(base: 'perro', synonyms: ['can', 'mascota']),
+      Word(base: 'gato', synonyms: ['felino', 'minino']),
+      Word(base: 'lobo', synonyms: ['cánido']),
     ],
   ),
 ];
