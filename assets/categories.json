@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "categorias": [
+    {
+      "nombre": "Animales",
+      "palabras": [
+        { "base": "perro", "sinonimos": ["can", "mascota", "animal doméstico"] },
+        { "base": "gato", "sinonimos": ["felino", "minino", "michi"] },
+        { "base": "elefante", "sinonimos": ["paquidermo", "bestia gris"] },
+        { "base": "delfín", "sinonimos": ["mamífero marino", "cetáceo"] }
+      ]
+    },
+    {
+      "nombre": "Comida",
+      "palabras": [
+        { "base": "pizza", "sinonimos": ["italiana redonda", "masa con queso"] },
+        { "base": "sushi", "sinonimos": ["maki", "nigiri", "roll japonés"] },
+        { "base": "hamburguesa", "sinonimos": ["burger", "sandwich de carne"] },
+        { "base": "tacos", "sinonimos": ["tortilla con relleno", "antojito mexicano"] }
+      ]
+    },
+    {
+      "nombre": "Deportes",
+      "palabras": [
+        { "base": "fútbol", "sinonimos": ["balompié", "soccer"] },
+        { "base": "natación", "sinonimos": ["nado", "deporte acuático"] },
+        { "base": "tenis", "sinonimos": ["raqueta", "pelota amarilla"] },
+        { "base": "boxeo", "sinonimos": ["pugilismo", "pelea de guantes"] }
+      ]
+    },
+    {
+      "nombre": "Profesiones",
+      "palabras": [
+        { "base": "médico", "sinonimos": ["doctor", "galeno"] },
+        { "base": "maestro", "sinonimos": ["profesor", "docente"] },
+        { "base": "bombero", "sinonimos": ["apagafuegos", "rescatista"] },
+        { "base": "chef", "sinonimos": ["cocinero profesional", "culinario"] }
+      ]
+    }
+  ]
+}
