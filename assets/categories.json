@@ -1,454 +1,3154 @@
 {
-  "version": "1.3.0",
+  "version": "1.4.0",
   "categorias": [
     {
       "nombre": "Animales",
       "palabras": [
-        { "base": "Perro", "sinonimos": ["Hueso", "Correa", "Ladrido", "Paseo"] },
-        { "base": "Gato", "sinonimos": ["Ratón", "Ovillo de lana", "Ronroneo", "Tejado"] },
-        { "base": "Elefante", "sinonimos": ["Trompa", "Sabana", "Colmillo", "Maní"] },
-        { "base": "Delfín", "sinonimos": ["Océano", "Salto", "Aleta", "Acuario"] },
-        { "base": "León", "sinonimos": ["Selva", "Melena", "Rugido", "Caza"] },
-        { "base": "Serpiente", "sinonimos": ["Veneno", "Cascabel", "Escamas", "Desierto"] },
-        { "base": "Murciélago", "sinonimos": ["Cueva", "Noche", "Radar", "Vampiro"] },
-        { "base": "Caballo", "sinonimos": ["Jinete", "Herradura", "Galope", "Establo"] },
-        { "base": "Oso", "sinonimos": ["Miel", "Cueva", "Hibernación", "Garras"] },
-        { "base": "Tigre", "sinonimos": ["Rayas", "Jungla", "Felino salvaje", "Cautiverio"] }
+        {
+          "base": "Perro",
+          "sinonimos": [
+            "ladra",
+            "hueso",
+            "correa",
+            "paseo",
+            "cola"
+          ]
+        },
+        {
+          "base": "Gato",
+          "sinonimos": [
+            "ronronea",
+            "ratón",
+            "ovillo",
+            "techo",
+            "bigotes"
+          ]
+        },
+        {
+          "base": "Elefante",
+          "sinonimos": [
+            "trompa",
+            "colmillo",
+            "sabana",
+            "maní",
+            "orejas"
+          ]
+        },
+        {
+          "base": "Delfín",
+          "sinonimos": [
+            "océano",
+            "salto",
+            "aleta",
+            "acuario",
+            "inteligente"
+          ]
+        },
+        {
+          "base": "León",
+          "sinonimos": [
+            "melena",
+            "rugido",
+            "selva",
+            "caza",
+            "rey"
+          ]
+        },
+        {
+          "base": "Serpiente",
+          "sinonimos": [
+            "veneno",
+            "cascabel",
+            "escamas",
+            "desierto",
+            "reptil"
+          ]
+        },
+        {
+          "base": "Murciélago",
+          "sinonimos": [
+            "noche",
+            "cueva",
+            "radar",
+            "vampiro",
+            "alas"
+          ]
+        },
+        {
+          "base": "Caballo",
+          "sinonimos": [
+            "galope",
+            "herradura",
+            "jinete",
+            "establo",
+            "crin"
+          ]
+        },
+        {
+          "base": "Oso",
+          "sinonimos": [
+            "miel",
+            "hibernación",
+            "garras",
+            "cueva",
+            "peludo"
+          ]
+        },
+        {
+          "base": "Tigre",
+          "sinonimos": [
+            "rayas",
+            "jungla",
+            "felino",
+            "rugido",
+            "rayado"
+          ]
+        }
       ]
     },
     {
       "nombre": "Comida Rápida",
       "palabras": [
-        { "base": "Pizza", "sinonimos": ["Queso fundido", "Horno", "Italia", "Rebanada"] },
-        { "base": "Sushi", "sinonimos": ["Pescado crudo", "Palillos", "Japón", "Arroz"] },
-        { "base": "Hamburguesa", "sinonimos": ["Papas fritas", "Kétchup", "Parrilla", "Pan de sésamo"] },
-        { "base": "Tacos", "sinonimos": ["Salsa picante", "Tortilla", "México", "Limón"] },
-        { "base": "Helado", "sinonimos": ["Barquillo", "Frío", "Verano", "Cuchera"] },
-        { "base": "Papas Fritas", "sinonimos": ["Sal", "Kétchup", "Fritura", "Aceite"] },
-        { "base": "Pollo Frito", "sinonimos": ["Crujiente", "Cubo", "Aceite", "Alitas"] },
-        { "base": "Burrito", "sinonimos": ["Enrollado", "Carne", "Frijoles", "Picante"] },
-        { "base": "Hot Dog", "sinonimos": ["Salchicha", "Mostaza", "Callejero", "Pan largo"] },
-        { "base": "Sándwich", "sinonimos": ["Pan tajado", "Jamón y queso", "Mortadela", "Merienda"] }
+        {
+          "base": "Pizza",
+          "sinonimos": [
+            "queso",
+            "horno",
+            "italia",
+            "rebanada",
+            "masa"
+          ]
+        },
+        {
+          "base": "Sushi",
+          "sinonimos": [
+            "pescado",
+            "palillos",
+            "japón",
+            "arroz",
+            "rollo"
+          ]
+        },
+        {
+          "base": "Hamburguesa",
+          "sinonimos": [
+            "papas",
+            "kétchup",
+            "parrilla",
+            "pan",
+            "carne"
+          ]
+        },
+        {
+          "base": "Tacos",
+          "sinonimos": [
+            "tortilla",
+            "salsa",
+            "méxico",
+            "limón",
+            "picante"
+          ]
+        },
+        {
+          "base": "Helado",
+          "sinonimos": [
+            "barquillo",
+            "frío",
+            "verano",
+            "cuchara",
+            "dulce"
+          ]
+        },
+        {
+          "base": "Papas Fritas",
+          "sinonimos": [
+            "sal",
+            "kétchup",
+            "crujientes",
+            "aceite",
+            "papas"
+          ]
+        },
+        {
+          "base": "Pollo Frito",
+          "sinonimos": [
+            "crujiente",
+            "aceite",
+            "alitas",
+            "cubos",
+            "frito"
+          ]
+        },
+        {
+          "base": "Burrito",
+          "sinonimos": [
+            "enrollado",
+            "carne",
+            "frijoles",
+            "tortilla",
+            "picante"
+          ]
+        },
+        {
+          "base": "Hot Dog",
+          "sinonimos": [
+            "salchicha",
+            "mostaza",
+            "pan",
+            "callejero",
+            "estadio"
+          ]
+        },
+        {
+          "base": "Sándwich",
+          "sinonimos": [
+            "pan",
+            "jamón",
+            "queso",
+            "merienda",
+            "rebanadas"
+          ]
+        }
       ]
     },
     {
       "nombre": "Deportes",
       "palabras": [
-        { "base": "Fútbol", "sinonimos": ["Gol", "Estadio", "Árbitro", "Tarjeta roja"] },
-        { "base": "Baloncesto", "sinonimos": ["Canasta", "Drible", "Rebote", "Tablero"] },
-        { "base": "Tenis", "sinonimos": ["Raqueta", "Red", "Wimbledon", "Saque"] },
-        { "base": "Natación", "sinonimos": ["Piscina", "Cloro", "Traje de baño", "Estilo libre"] },
-        { "base": "Boxeo", "sinonimos": ["Guantes", "Ring", "Nocaut", "Campana"] },
-        { "base": "Ciclismo", "sinonimos": ["Bicicleta", "Casco", "Pedal", "Ruta"] },
-        { "base": "Voleibol", "sinonimos": ["Remate", "Bloqueo", "Arena", "Saque"] },
-        { "base": "Golf", "sinonimos": ["Hoyo", "Palo", "Césped", "Carrito"] },
-        { "base": "Béisbol", "sinonimos": ["Bate", "Jonrón", "Guante", "Diamante"] },
-        { "base": "Atletismo", "sinonimos": ["Carrera", "Pista", "Salto", "Relevos"] }
+        {
+          "base": "Fútbol",
+          "sinonimos": [
+            "gol",
+            "estadio",
+            "árbitro",
+            "tarjeta",
+            "cancha"
+          ]
+        },
+        {
+          "base": "Baloncesto",
+          "sinonimos": [
+            "canasta",
+            "drible",
+            "rebote",
+            "tablero",
+            "aro"
+          ]
+        },
+        {
+          "base": "Tenis",
+          "sinonimos": [
+            "raqueta",
+            "red",
+            "saque",
+            "pelota",
+            "wimbledon"
+          ]
+        },
+        {
+          "base": "Natación",
+          "sinonimos": [
+            "piscina",
+            "cloro",
+            "estilo",
+            "agua",
+            "gafas"
+          ]
+        },
+        {
+          "base": "Boxeo",
+          "sinonimos": [
+            "guantes",
+            "ring",
+            "nocaut",
+            "campana",
+            "combate"
+          ]
+        },
+        {
+          "base": "Ciclismo",
+          "sinonimos": [
+            "bicicleta",
+            "pedal",
+            "casco",
+            "ruta",
+            "carrera"
+          ]
+        },
+        {
+          "base": "Voleibol",
+          "sinonimos": [
+            "remate",
+            "bloqueo",
+            "red",
+            "arena",
+            "saque"
+          ]
+        },
+        {
+          "base": "Golf",
+          "sinonimos": [
+            "hoyo",
+            "palo",
+            "césped",
+            "pelota",
+            "carrito"
+          ]
+        },
+        {
+          "base": "Béisbol",
+          "sinonimos": [
+            "bate",
+            "jonrón",
+            "guante",
+            "diamante",
+            "lanzador"
+          ]
+        },
+        {
+          "base": "Atletismo",
+          "sinonimos": [
+            "carrera",
+            "pista",
+            "salto",
+            "relevos",
+            "velocidad"
+          ]
+        }
       ]
     },
     {
       "nombre": "Profesiones",
       "palabras": [
-        { "base": "Médico", "sinonimos": ["Hospital", "Estetoscopio", "Paciente", "Receta"] },
-        { "base": "Profesor", "sinonimos": ["Pizarra", "Escuela", "Estudiante", "Examen"] },
-        { "base": "Bombero", "sinonimos": ["Fuego", "Manguera", "Sirena", "Escalera"] },
-        { "base": "Abogado", "sinonimos": ["Juicio", "Juez", "Ley", "Corte"] },
-        { "base": "Cocinero", "sinonimos": ["Receta", "Olla", "Restaurante", "Sartén"] },
-        { "base": "Policía", "sinonimos": ["Esposas", "Patrulla", "Placa", "Multa"] },
-        { "base": "Arquitecto", "sinonimos": ["Plano", "Edificio", "Construcción", "Maqueta"] },
-        { "base": "Programador", "sinonimos": ["Código", "Teclado", "Pantalla", "Bichos (Bugs)"] },
-        { "base": "Piloto", "sinonimos": ["Avión", "Vuelo", "Cielo", "Aeropuerto"] },
-        { "base": "Periodista", "sinonimos": ["Noticia", "Micrófono", "Cámara", "Entrevista"] }
+        {
+          "base": "Médico",
+          "sinonimos": [
+            "hospital",
+            "estetoscopio",
+            "paciente",
+            "receta",
+            "doctor"
+          ]
+        },
+        {
+          "base": "Profesor",
+          "sinonimos": [
+            "escuela",
+            "pizarra",
+            "estudiante",
+            "examen",
+            "clase"
+          ]
+        },
+        {
+          "base": "Bombero",
+          "sinonimos": [
+            "fuego",
+            "manguera",
+            "sirena",
+            "escalera",
+            "incendio"
+          ]
+        },
+        {
+          "base": "Abogado",
+          "sinonimos": [
+            "juicio",
+            "juez",
+            "ley",
+            "corte",
+            "defensa"
+          ]
+        },
+        {
+          "base": "Cocinero",
+          "sinonimos": [
+            "receta",
+            "olla",
+            "sartén",
+            "restaurante",
+            "chef"
+          ]
+        },
+        {
+          "base": "Policía",
+          "sinonimos": [
+            "patrulla",
+            "placa",
+            "multa",
+            "esposas",
+            "orden"
+          ]
+        },
+        {
+          "base": "Arquitecto",
+          "sinonimos": [
+            "plano",
+            "edificio",
+            "construcción",
+            "maqueta",
+            "diseño"
+          ]
+        },
+        {
+          "base": "Programador",
+          "sinonimos": [
+            "código",
+            "teclado",
+            "bug",
+            "pantalla",
+            "app"
+          ]
+        },
+        {
+          "base": "Piloto",
+          "sinonimos": [
+            "avión",
+            "vuelo",
+            "aeropuerto",
+            "cielo",
+            "cabina"
+          ]
+        },
+        {
+          "base": "Periodista",
+          "sinonimos": [
+            "noticia",
+            "micrófono",
+            "entrevista",
+            "cámara",
+            "reportaje"
+          ]
+        }
       ]
     },
     {
       "nombre": "Tecnología",
       "palabras": [
-        { "base": "Computadora", "sinonimos": ["Teclado", "Ratón", "Monitor", "Escritorio"] },
-        { "base": "Smartphone", "sinonimos": ["Batería", "Aplicación", "Pantalla táctil", "Bolsillo"] },
-        { "base": "Internet", "sinonimos": ["Router", "Wifi", "Navegador", "Nube"] },
-        { "base": "Inteligencia Artificial", "sinonimos": ["Robot", "Algoritmo", "Futuro", "Datos"] },
-        { "base": "Videojuego", "sinonimos": ["Mando", "Consola", "Nivel", "Jugador"] },
-        { "base": "Auriculares", "sinonimos": ["Música", "Volumen", "Cable", "Silencio"] },
-        { "base": "Cámara digital", "sinonimos": ["Foto", "Flash", "Lente", "Enfoque"] },
-        { "base": "Dron", "sinonimos": ["Vuelo", "Control remoto", "Altura", "Cámara aérea"] },
-        { "base": "Reloj Inteligente", "sinonimos": ["Muñeca", "Pasos", "Ritmo cardíaco", "Pantalla pequeña"] },
-        { "base": "Tableta", "sinonimos": ["Pantalla táctil grande", "Dibujo digital", "Sin teclado", "Lápiz digital"] }
+        {
+          "base": "Computadora",
+          "sinonimos": [
+            "teclado",
+            "ratón",
+            "monitor",
+            "pantalla",
+            "escritorio"
+          ]
+        },
+        {
+          "base": "Smartphone",
+          "sinonimos": [
+            "celular",
+            "batería",
+            "app",
+            "táctil",
+            "bolsillo"
+          ]
+        },
+        {
+          "base": "Internet",
+          "sinonimos": [
+            "wifi",
+            "router",
+            "navegador",
+            "nube",
+            "conexión"
+          ]
+        },
+        {
+          "base": "Inteligencia Artificial",
+          "sinonimos": [
+            "robot",
+            "algoritmo",
+            "datos",
+            "ia",
+            "futuro"
+          ]
+        },
+        {
+          "base": "Videojuego",
+          "sinonimos": [
+            "mando",
+            "consola",
+            "nivel",
+            "jugador",
+            "pantalla"
+          ]
+        },
+        {
+          "base": "Auriculares",
+          "sinonimos": [
+            "música",
+            "volumen",
+            "orejas",
+            "cable",
+            "inalámbricos"
+          ]
+        },
+        {
+          "base": "Cámara digital",
+          "sinonimos": [
+            "foto",
+            "flash",
+            "lente",
+            "enfoque",
+            "imagen"
+          ]
+        },
+        {
+          "base": "Dron",
+          "sinonimos": [
+            "vuelo",
+            "control",
+            "cámara",
+            "aire",
+            "remoto"
+          ]
+        },
+        {
+          "base": "Reloj Inteligente",
+          "sinonimos": [
+            "muñeca",
+            "pasos",
+            "corazón",
+            "pantalla",
+            "smartwatch"
+          ]
+        },
+        {
+          "base": "Tableta",
+          "sinonimos": [
+            "táctil",
+            "pantalla",
+            "dibujo",
+            "lápiz",
+            "grande"
+          ]
+        }
       ]
     },
     {
-      "nombre": "Vehículos e ir",
+      "nombre": "Vehículos",
       "palabras": [
-        { "base": "Coche", "sinonimos": ["Volante", "Motor", "Asfalto", "Llaves"] },
-        { "base": "Avión", "sinonimos": ["Vuelo", "Aeropuerto", "Piloto", "Equipaje"] },
-        { "base": "Barco", "sinonimos": ["Mar", "Puerto", "Capitán", "Ancla"] },
-        { "base": "Tren", "sinonimos": ["Vías", "Estación", "Vagón", "Boleto"] },
-        { "base": "Bicicleta", "sinonimos": ["Cadena", "Llanta", "Equilibrio", "Paseo"] },
-        { "base": "Motocicleta", "sinonimos": ["Casco", "Velocidad", "Acelerador", "Carretera"] },
-        { "base": "Autobús", "sinonimos": ["Pasajeros", "Parada", "Ruta", "Timbre"] },
-        { "base": "Helicóptero", "sinonimos": ["Hélice", "Rescate", "Aire", "Aterrizaje"] },
-        { "base": "Submarino", "sinonimos": ["Bajo el agua", "Océano", "Sonar", "Torpedo"] },
-        { "base": "Camión", "sinonimos": ["Carga", "Remolque", "Carretera", "Caja grande"] }
+        {
+          "base": "Coche",
+          "sinonimos": [
+            "volante",
+            "motor",
+            "llaves",
+            "asfalto",
+            "ruedas"
+          ]
+        },
+        {
+          "base": "Avión",
+          "sinonimos": [
+            "vuelo",
+            "aeropuerto",
+            "piloto",
+            "equipaje",
+            "alas"
+          ]
+        },
+        {
+          "base": "Barco",
+          "sinonimos": [
+            "mar",
+            "puerto",
+            "ancla",
+            "capitán",
+            "nave"
+          ]
+        },
+        {
+          "base": "Tren",
+          "sinonimos": [
+            "vías",
+            "estación",
+            "vagón",
+            "boleto",
+            "riel"
+          ]
+        },
+        {
+          "base": "Bicicleta",
+          "sinonimos": [
+            "pedales",
+            "cadena",
+            "equilibrio",
+            "llanta",
+            "paseo"
+          ]
+        },
+        {
+          "base": "Motocicleta",
+          "sinonimos": [
+            "casco",
+            "velocidad",
+            "carretera",
+            "acelerador",
+            "dos ruedas"
+          ]
+        },
+        {
+          "base": "Autobús",
+          "sinonimos": [
+            "pasajeros",
+            "parada",
+            "ruta",
+            "timbre",
+            "transporte"
+          ]
+        },
+        {
+          "base": "Helicóptero",
+          "sinonimos": [
+            "hélice",
+            "aire",
+            "rescate",
+            "aterrizaje",
+            "volar"
+          ]
+        },
+        {
+          "base": "Submarino",
+          "sinonimos": [
+            "océano",
+            "sonar",
+            "bajo agua",
+            "torpedo",
+            "profundo"
+          ]
+        },
+        {
+          "base": "Camión",
+          "sinonimos": [
+            "carga",
+            "remolque",
+            "carretera",
+            "grande",
+            "transporte"
+          ]
+        }
       ]
     },
     {
       "nombre": "Música",
       "palabras": [
-        { "base": "Guitarra", "sinonimos": ["Cuerdas", "Púa", "Acorde", "Madera"] },
-        { "base": "Piano", "sinonimos": ["Teclas", "Pedal", "Partitura", "Banqueta"] },
-        { "base": "Batería", "sinonimos": ["Baquetas", "Ritmo", "Platillo", "Banda"] },
-        { "base": "Violín", "sinonimos": ["Arco", "Orquesta", "Clásico", "Hombro"] },
-        { "base": "Trompeta", "sinonimos": ["Viento", "Jazz", "Metal", "Soplido"] },
-        { "base": "Micrófono", "sinonimos": ["Voz", "Escenario", "Cantante", "Cable"] },
-        { "base": "Concierto", "sinonimos": ["Público", "Entrada", "Luces", "Aplausos"] },
-        { "base": "Canción", "sinonimos": ["Melodía", "Letra", "Radio", "Estribillo"] },
-        { "base": "Flauta", "sinonimos": ["Soplo", "Agujeros", "Madera o metal", "Sonido suave"] },
-        { "base": "Saxofón", "sinonimos": ["Jazz", "Metal dorado", "Curvo", "Soplido"] }
+        {
+          "base": "Guitarra",
+          "sinonimos": [
+            "cuerdas",
+            "acorde",
+            "púa",
+            "madera",
+            "eléctrica"
+          ]
+        },
+        {
+          "base": "Piano",
+          "sinonimos": [
+            "teclas",
+            "pedal",
+            "partitura",
+            "banqueta",
+            "clásico"
+          ]
+        },
+        {
+          "base": "Batería",
+          "sinonimos": [
+            "baquetas",
+            "ritmo",
+            "platillo",
+            "percusión",
+            "baterista"
+          ]
+        },
+        {
+          "base": "Violín",
+          "sinonimos": [
+            "arco",
+            "orquesta",
+            "clásico",
+            "hombro",
+            "cuerda"
+          ]
+        },
+        {
+          "base": "Trompeta",
+          "sinonimos": [
+            "viento",
+            "jazz",
+            "metal",
+            "soplido",
+            "instrumento"
+          ]
+        },
+        {
+          "base": "Micrófono",
+          "sinonimos": [
+            "voz",
+            "escenario",
+            "cantante",
+            "cable",
+            "amplificar"
+          ]
+        },
+        {
+          "base": "Concierto",
+          "sinonimos": [
+            "público",
+            "aplausos",
+            "luces",
+            "escenario",
+            "música"
+          ]
+        },
+        {
+          "base": "Canción",
+          "sinonimos": [
+            "melodía",
+            "letra",
+            "estribillo",
+            "radio",
+            "cantar"
+          ]
+        },
+        {
+          "base": "Flauta",
+          "sinonimos": [
+            "soplo",
+            "agujeros",
+            "madera",
+            "suave",
+            "viento"
+          ]
+        },
+        {
+          "base": "Saxofón",
+          "sinonimos": [
+            "jazz",
+            "metal",
+            "curvo",
+            "soplido",
+            "viento"
+          ]
+        }
       ]
     },
     {
       "nombre": "Cosas de la Casa",
       "palabras": [
-        { "base": "Refrigerador", "sinonimos": ["Hielo", "Comida", "Congelador", "Cocina"] },
-        { "base": "Televisor", "sinonimos": ["Control remoto", "Sillón", "Pantalla", "Película"] },
-        { "base": "Lavadora", "sinonimos": ["Detergente", "Ropa sucia", "Centrifugado", "Agua"] },
-        { "base": "Microondas", "sinonimos": ["Calentar", "Plato giratorio", "Rápido", "Comida sobrante"] },
-        { "base": "Cama", "sinonimos": ["Almohada", "Sábanas", "Sueño", "Madrugada"] },
-        { "base": "Sofá", "sinonimos": ["Cojín", "Descanso", "Sala", "Siesta"] },
-        { "base": "Espejo", "sinonimos": ["Reflejo", "Baño", "Peine", "Vidrio"] },
-        { "base": "Lámpara", "sinonimos": ["Luz", "Foco", "Sombra", "Mesa de noche"] },
-        { "base": "Aspiradora", "sinonimos": ["Polvo", "Alfombra", "Ruido", "Limpieza"] },
-        { "base": "Plancha", "sinonimos": ["Calor", "Arrugas", "Ropa limpia", "Vapor"] }
+        {
+          "base": "Refrigerador",
+          "sinonimos": [
+            "hielo",
+            "comida",
+            "congelador",
+            "cocina",
+            "frío"
+          ]
+        },
+        {
+          "base": "Televisor",
+          "sinonimos": [
+            "control",
+            "pantalla",
+            "película",
+            "sillón",
+            "canal"
+          ]
+        },
+        {
+          "base": "Lavadora",
+          "sinonimos": [
+            "ropa",
+            "detergente",
+            "agua",
+            "centrifugado",
+            "lavar"
+          ]
+        },
+        {
+          "base": "Microondas",
+          "sinonimos": [
+            "calentar",
+            "plato",
+            "rápido",
+            "comida",
+            "minutos"
+          ]
+        },
+        {
+          "base": "Cama",
+          "sinonimos": [
+            "almohada",
+            "sábanas",
+            "dormir",
+            "habitación",
+            "noche"
+          ]
+        },
+        {
+          "base": "Sofá",
+          "sinonimos": [
+            "cojín",
+            "descanso",
+            "sala",
+            "siesta",
+            "sentarse"
+          ]
+        },
+        {
+          "base": "Espejo",
+          "sinonimos": [
+            "reflejo",
+            "baño",
+            "vidrio",
+            "mirar",
+            "imagen"
+          ]
+        },
+        {
+          "base": "Lámpara",
+          "sinonimos": [
+            "luz",
+            "foco",
+            "mesa",
+            "noche",
+            "iluminar"
+          ]
+        },
+        {
+          "base": "Aspiradora",
+          "sinonimos": [
+            "polvo",
+            "alfombra",
+            "limpieza",
+            "ruido",
+            "chupar"
+          ]
+        },
+        {
+          "base": "Plancha",
+          "sinonimos": [
+            "ropa",
+            "calor",
+            "arrugas",
+            "vapor",
+            "alisar"
+          ]
+        }
       ]
     },
     {
       "nombre": "Naturaleza",
       "palabras": [
-        { "base": "Árbol", "sinonimos": ["Tronco", "Hojas", "Raíz", "Bosque"] },
-        { "base": "Montaña", "sinonimos": ["Nieve", "Pico", "Escalar", "Roca"] },
-        { "base": "Río", "sinonimos": ["Agua dulce", "Corriente", "Peces", "Piedras"] },
-        { "base": "Playa", "sinonimos": ["Arena", "Olas", "Sol", "Mar"] },
-        { "base": "Flor", "sinonimos": ["Pétalos", "Perfume", "Jardín", "Primavera"] },
-        { "base": "Bosque", "sinonimos": ["Muchos árboles", "Animales salvajes", "Oscuridad", "Senderismo"] },
-        { "base": "Cueva", "sinonimos": ["Rocas", "Oscuridad", "Murciélagos", "Estalactitas"] },
-        { "base": "Volcán", "sinonimos": ["Lava", "Ceniza", "Erupción", "Magma"] },
-        { "base": "Cascada", "sinonimos": ["Caída de agua", "Río", "Rocas", "Mojarse"] },
-        { "base": "Desierto", "sinonimos": ["Arena cálida", "Sol ardiente", "Oasis", "Cactus"] }
+        {
+          "base": "Árbol",
+          "sinonimos": [
+            "tronco",
+            "hojas",
+            "raíz",
+            "bosque",
+            "sombra"
+          ]
+        },
+        {
+          "base": "Montaña",
+          "sinonimos": [
+            "pico",
+            "nieve",
+            "escalar",
+            "roca",
+            "alta"
+          ]
+        },
+        {
+          "base": "Río",
+          "sinonimos": [
+            "agua",
+            "corriente",
+            "peces",
+            "piedras",
+            "fluye"
+          ]
+        },
+        {
+          "base": "Playa",
+          "sinonimos": [
+            "arena",
+            "olas",
+            "sol",
+            "mar",
+            "verano"
+          ]
+        },
+        {
+          "base": "Flor",
+          "sinonimos": [
+            "pétalos",
+            "jardín",
+            "perfume",
+            "primavera",
+            "color"
+          ]
+        },
+        {
+          "base": "Bosque",
+          "sinonimos": [
+            "árboles",
+            "animales",
+            "sendero",
+            "verde",
+            "oscuro"
+          ]
+        },
+        {
+          "base": "Cueva",
+          "sinonimos": [
+            "roca",
+            "oscura",
+            "murciélago",
+            "estalactita",
+            "húmeda"
+          ]
+        },
+        {
+          "base": "Volcán",
+          "sinonimos": [
+            "lava",
+            "erupción",
+            "ceniza",
+            "magma",
+            "fuego"
+          ]
+        },
+        {
+          "base": "Cascada",
+          "sinonimos": [
+            "agua",
+            "caída",
+            "roca",
+            "mojado",
+            "ruido"
+          ]
+        },
+        {
+          "base": "Desierto",
+          "sinonimos": [
+            "arena",
+            "cactus",
+            "calor",
+            "oasis",
+            "seco"
+          ]
+        }
       ]
     },
     {
       "nombre": "Ropa y Accesorios",
       "palabras": [
-        { "base": "Camisa", "sinonimos": ["Botones", "Mangas", "Cuello", "Vestir"] },
-        { "base": "Pantalón", "sinonimos": ["Piernas", "Cinturón", "Bolsillos", "Vaqueros"] },
-        { "base": "Zapatos", "sinonimos": ["Pies", "Cordones", "Suela", "Caminar"] },
-        { "base": "Sombrero", "sinonimos": ["Cabeza", "Sol", "Sombra", "Gorra"] },
-        { "base": "Reloj", "sinonimos": ["Muñeca", "Tiempo", "Agujas", "Hora"] },
-        { "base": "Gafas de sol", "sinonimos": ["Ojos", "Brillo", "Lentes oscuros", "Verano"] },
-        { "base": "Cinturón", "sinonimos": ["Hebilla", "Cintura", "Pantalón flojo", "Cuero"] },
-        { "base": "Bufanda", "sinonimos": ["Cuello", "Frío", "Lana", "Invierno"] },
-        { "base": "Guantes", "sinonimos": ["Manos", "Frío", "Dedos", "Nieve"] },
-        { "base": "Chaqueta", "sinonimos": ["Cierre", "Frío", "Abrigo", "Mangas largas"] }
+        {
+          "base": "Camisa",
+          "sinonimos": [
+            "botones",
+            "mangas",
+            "cuello",
+            "vestir",
+            "tela"
+          ]
+        },
+        {
+          "base": "Pantalón",
+          "sinonimos": [
+            "piernas",
+            "cinturón",
+            "bolsillos",
+            "vaqueros",
+            "cintura"
+          ]
+        },
+        {
+          "base": "Zapatos",
+          "sinonimos": [
+            "pies",
+            "cordones",
+            "suela",
+            "caminar",
+            "calzado"
+          ]
+        },
+        {
+          "base": "Sombrero",
+          "sinonimos": [
+            "cabeza",
+            "sol",
+            "sombra",
+            "gorra",
+            "ala"
+          ]
+        },
+        {
+          "base": "Reloj",
+          "sinonimos": [
+            "muñeca",
+            "tiempo",
+            "hora",
+            "agujas",
+            "pulsera"
+          ]
+        },
+        {
+          "base": "Gafas de sol",
+          "sinonimos": [
+            "ojos",
+            "brillo",
+            "verano",
+            "lentes",
+            "protección"
+          ]
+        },
+        {
+          "base": "Cinturón",
+          "sinonimos": [
+            "hebilla",
+            "cintura",
+            "pantalón",
+            "cuero",
+            "ajustar"
+          ]
+        },
+        {
+          "base": "Bufanda",
+          "sinonimos": [
+            "cuello",
+            "frío",
+            "lana",
+            "invierno",
+            "enrollar"
+          ]
+        },
+        {
+          "base": "Guantes",
+          "sinonimos": [
+            "manos",
+            "frío",
+            "dedos",
+            "nieve",
+            "lana"
+          ]
+        },
+        {
+          "base": "Chaqueta",
+          "sinonimos": [
+            "frío",
+            "cierre",
+            "abrigo",
+            "mangas",
+            "cálida"
+          ]
+        }
       ]
     },
     {
       "nombre": "Cine y Televisión",
       "palabras": [
-        { "base": "Película", "sinonimos": ["Cine", "Actor", "Director", "Palomitas"] },
-        { "base": "Actor", "sinonimos": ["Interpretación", "Escenario", "Fama", "Personaje"] },
-        { "base": "Cine", "sinonimos": ["Pantalla gigante", "Butaca", "Oscuridad", "Estreno"] },
-        { "base": "Palomitas", "sinonimos": ["Maíz", "Sal", "Mantequilla", "Cine"] },
-        { "base": "Cámara", "sinonimos": ["Grabar", "Lente", "Acción", "Director"] },
-        { "base": "Director", "sinonimos": ["¡Corten!", "Cámara", "Responsable de la película", "Guion"] },
-        { "base": "Guion", "sinonimos": ["Diálogos", "Papel", "Letras", "Historia escrita"] },
-        { "base": "Butaca", "sinonimos": ["Asiento", "Cine", "Acomodarse", "Rojo"] },
-        { "base": "Pantalla", "sinonimos": ["Proyección", "Luz", "Imágenes gigantes", "Visual"] },
-        { "base": "Premio Oscar", "sinonimos": ["Estatuilla dorada", "Alfombra roja", "Mejor película", "Galardón"] }
+        {
+          "base": "Película",
+          "sinonimos": [
+            "cine",
+            "actor",
+            "director",
+            "palomitas",
+            "pantalla"
+          ]
+        },
+        {
+          "base": "Actor",
+          "sinonimos": [
+            "personaje",
+            "interpretar",
+            "fama",
+            "escena",
+            "cine"
+          ]
+        },
+        {
+          "base": "Cine",
+          "sinonimos": [
+            "pantalla",
+            "butaca",
+            "oscuro",
+            "estreno",
+            "película"
+          ]
+        },
+        {
+          "base": "Palomitas",
+          "sinonimos": [
+            "maíz",
+            "sal",
+            "mantequilla",
+            "cine",
+            "crujientes"
+          ]
+        },
+        {
+          "base": "Cámara",
+          "sinonimos": [
+            "grabar",
+            "lente",
+            "director",
+            "acción",
+            "film"
+          ]
+        },
+        {
+          "base": "Director",
+          "sinonimos": [
+            "cámara",
+            "corten",
+            "guion",
+            "película",
+            "set"
+          ]
+        },
+        {
+          "base": "Guion",
+          "sinonimos": [
+            "diálogos",
+            "historia",
+            "papel",
+            "escrito",
+            "escena"
+          ]
+        },
+        {
+          "base": "Butaca",
+          "sinonimos": [
+            "asiento",
+            "cine",
+            "cómodo",
+            "oscuro",
+            "sentarse"
+          ]
+        },
+        {
+          "base": "Pantalla",
+          "sinonimos": [
+            "proyección",
+            "grande",
+            "imágenes",
+            "luz",
+            "cine"
+          ]
+        },
+        {
+          "base": "Premio Oscar",
+          "sinonimos": [
+            "estatuilla",
+            "alfombra roja",
+            "mejor",
+            "galardón",
+            "oro"
+          ]
+        }
       ]
     },
     {
       "nombre": "Escuela",
       "palabras": [
-        { "base": "Pizarra", "sinonimos": ["Tiza", "Profesor", "Marcador", "Borrar"] },
-        { "base": "Cuaderno", "sinonimos": ["Hojas", "Escribir", "Apuntes", "Márgenes"] },
-        { "base": "Lápiz", "sinonimos": ["Madera", "Grafito", "Sacapuntas", "Dibujar"] },
-        { "base": "Mochila", "sinonimos": ["Espalda", "Libros", "Cremallera", "Cargar"] },
-        { "base": "Examen", "sinonimos": ["Prueba", "Estudiar", "Calificación", "Nervios"] },
-        { "base": "Recreo", "sinonimos": ["Descanso", "Jugar", "Patio", "Bocadillo"] },
-        { "base": "Libro", "sinonimos": ["Leer", "Páginas", "Historia", "Biblioteca"] },
-        { "base": "Borrador", "sinonimos": ["Goma", "Equivocación", "Lápiz", "Papel"] },
-        { "base": "Pupitre", "sinonimos": ["Mesa escolar", "Silla unida", "Sentarse", "Alumno"] },
-        { "base": "Regla", "sinonimos": ["Medir", "Centímetros", "Línea recta", "Largo"] }
+        {
+          "base": "Pizarra",
+          "sinonimos": [
+            "tiza",
+            "profesor",
+            "borrar",
+            "marcador",
+            "clase"
+          ]
+        },
+        {
+          "base": "Cuaderno",
+          "sinonimos": [
+            "hojas",
+            "apuntes",
+            "escribir",
+            "márgenes",
+            "tarea"
+          ]
+        },
+        {
+          "base": "Lápiz",
+          "sinonimos": [
+            "grafito",
+            "sacapuntas",
+            "dibujar",
+            "madera",
+            "escribir"
+          ]
+        },
+        {
+          "base": "Mochila",
+          "sinonimos": [
+            "libros",
+            "espalda",
+            "cremallera",
+            "cargar",
+            "escuela"
+          ]
+        },
+        {
+          "base": "Examen",
+          "sinonimos": [
+            "prueba",
+            "estudiar",
+            "calificación",
+            "nervios",
+            "nota"
+          ]
+        },
+        {
+          "base": "Recreo",
+          "sinonimos": [
+            "descanso",
+            "patio",
+            "jugar",
+            "bocadillo",
+            "campana"
+          ]
+        },
+        {
+          "base": "Libro",
+          "sinonimos": [
+            "leer",
+            "páginas",
+            "historia",
+            "biblioteca",
+            "texto"
+          ]
+        },
+        {
+          "base": "Borrador",
+          "sinonimos": [
+            "goma",
+            "borrar",
+            "error",
+            "lápiz",
+            "papel"
+          ]
+        },
+        {
+          "base": "Pupitre",
+          "sinonimos": [
+            "mesa",
+            "silla",
+            "alumno",
+            "clase",
+            "sentarse"
+          ]
+        },
+        {
+          "base": "Regla",
+          "sinonimos": [
+            "medir",
+            "centímetros",
+            "línea",
+            "recta",
+            "dibujo"
+          ]
+        }
       ]
     },
     {
       "nombre": "Herramientas",
       "palabras": [
-        { "base": "Martillo", "sinonimos": ["Golpear", "Clavo", "Mango", "Carpintero"] },
-        { "base": "Destornillador", "sinonimos": ["Tornillo", "Girar", "Punta de cruz", "Apretar"] },
-        { "base": "Taladro", "sinonimos": ["Hacer agujeros", "Ruido fuerte", "Broca", "Pared"] },
-        { "base": "Sierra", "sinonimos": ["Cortar madera", "Dientes afilados", "Tronco", "Carpintería"] },
-        { "base": "Llave Inglesa", "sinonimos": ["Tuerca", "Ajustar", "Tubería", "Mecánico"] },
-        { "base": "Clavo", "sinonimos": ["Martillo", "Pared", "Metal pequeño", "Sostener cuadro"] },
-        { "base": "Cinta Métrica", "sinonimos": ["Medir", "Largo", "Enrollable", "Metros"] },
-        { "base": "Alicate", "sinonimos": ["Apretar", "Cortar cables", "Pinza metálica", "Herramienta manual"] },
-        { "base": "Pincel", "sinonimos": ["Pintura", "Brochazo", "Color", "Cuadro"] },
-        { "base": "Pala", "sinonimos": ["Cavar", "Tierra", "Hoyo", "Jardinería"] }
+        {
+          "base": "Martillo",
+          "sinonimos": [
+            "clavo",
+            "golpear",
+            "mango",
+            "carpintero",
+            "martillazo"
+          ]
+        },
+        {
+          "base": "Destornillador",
+          "sinonimos": [
+            "tornillo",
+            "girar",
+            "punta",
+            "apretar",
+            "herramienta"
+          ]
+        },
+        {
+          "base": "Taladro",
+          "sinonimos": [
+            "agujero",
+            "broca",
+            "pared",
+            "ruido",
+            "perforar"
+          ]
+        },
+        {
+          "base": "Sierra",
+          "sinonimos": [
+            "cortar",
+            "madera",
+            "dientes",
+            "carpintería",
+            "hoja"
+          ]
+        },
+        {
+          "base": "Llave Inglesa",
+          "sinonimos": [
+            "tuerca",
+            "ajustar",
+            "mecánico",
+            "tubería",
+            "apretar"
+          ]
+        },
+        {
+          "base": "Clavo",
+          "sinonimos": [
+            "martillo",
+            "pared",
+            "metal",
+            "sostener",
+            "punta"
+          ]
+        },
+        {
+          "base": "Cinta Métrica",
+          "sinonimos": [
+            "medir",
+            "metros",
+            "enrollable",
+            "largo",
+            "distancia"
+          ]
+        },
+        {
+          "base": "Alicate",
+          "sinonimos": [
+            "cortar",
+            "cable",
+            "pinza",
+            "apretar",
+            "herramienta"
+          ]
+        },
+        {
+          "base": "Pincel",
+          "sinonimos": [
+            "pintura",
+            "brocha",
+            "color",
+            "cuadro",
+            "pintar"
+          ]
+        },
+        {
+          "base": "Pala",
+          "sinonimos": [
+            "cavar",
+            "tierra",
+            "jardín",
+            "hoyo",
+            "arena"
+          ]
+        }
       ]
     },
     {
       "nombre": "Lugares de la Ciudad",
       "palabras": [
-        { "base": "Hospital", "sinonimos": ["Médico", "Enfermos", "Ambulancia", "Camas blancas"] },
-        { "base": "Escuela", "sinonimos": ["Niños", "Profesor", "Aulas", "Aprender"] },
-        { "base": "Banco", "sinonimos": ["Dinero", "Cajero automático", "Préstamo", "Bóveda"] },
-        { "base": "Parque", "sinonimos": ["Árboles", "Pasto", "Jugar", "Bancas"] },
-        { "base": "Supermercado", "sinonimos": ["Compras", "Carrito", "Pasillos", "Caja registradora"] },
-        { "base": "Cine", "sinonimos": ["Películas", "Palomitas", "Pantalla gigante", "Oscuridad"] },
-        { "base": "Aeropuerto", "sinonimos": ["Aviones", "Maletas", "Viaje", "Pista de aterrizaje"] },
-        { "base": "Museo", "sinonimos": ["Arte", "Exhibición", "Historia", "Cuadros antiguos"] },
-        { "base": "Biblioteca", "sinonimos": ["Libros", "Silencio", "Estantes", "Leer"] },
-        { "base": "Estación de Tren", "sinonimos": ["Pasajeros", "Vías", "Boleto", "Viaje sobre rieles"] }
+        {
+          "base": "Hospital",
+          "sinonimos": [
+            "médico",
+            "enfermo",
+            "ambulancia",
+            "cama",
+            "doctor"
+          ]
+        },
+        {
+          "base": "Escuela",
+          "sinonimos": [
+            "niños",
+            "profesor",
+            "aula",
+            "aprender",
+            "clase"
+          ]
+        },
+        {
+          "base": "Banco",
+          "sinonimos": [
+            "dinero",
+            "cajero",
+            "préstamo",
+            "cuenta",
+            "bóveda"
+          ]
+        },
+        {
+          "base": "Parque",
+          "sinonimos": [
+            "árboles",
+            "jugar",
+            "banca",
+            "pasto",
+            "verde"
+          ]
+        },
+        {
+          "base": "Supermercado",
+          "sinonimos": [
+            "compras",
+            "carrito",
+            "pasillos",
+            "caja",
+            "comida"
+          ]
+        },
+        {
+          "base": "Cine",
+          "sinonimos": [
+            "película",
+            "palomitas",
+            "pantalla",
+            "oscuro",
+            "butaca"
+          ]
+        },
+        {
+          "base": "Aeropuerto",
+          "sinonimos": [
+            "avión",
+            "maleta",
+            "vuelo",
+            "pista",
+            "viaje"
+          ]
+        },
+        {
+          "base": "Museo",
+          "sinonimos": [
+            "arte",
+            "cuadros",
+            "historia",
+            "exhibición",
+            "silencio"
+          ]
+        },
+        {
+          "base": "Biblioteca",
+          "sinonimos": [
+            "libros",
+            "silencio",
+            "leer",
+            "estantes",
+            "préstamo"
+          ]
+        },
+        {
+          "base": "Estación de Tren",
+          "sinonimos": [
+            "vías",
+            "boleto",
+            "pasajeros",
+            "tren",
+            "viaje"
+          ]
+        }
       ]
     },
     {
       "nombre": "Frutas y Verduras",
       "palabras": [
-        { "base": "Manzana", "sinonimos": ["Rojo o verde", "Árbol", "Fruta dura", "Gusano"] },
-        { "base": "Plátano", "sinonimos": ["Amarillo", "Pelar", "Mono", "Dulce y blando"] },
-        { "base": "Naranja", "sinonimos": ["Jugo", "Vitamina C", "Redonda", "Gajos"] },
-        { "base": "Fresa", "sinonimos": ["Roja con semillas", "Pequeña", "Crema", "Dulce"] },
-        { "base": "Zanahoria", "sinonimos": ["Naranja", "Conejo", "Verdura crujiente", "Tierra"] },
-        { "base": "Brócoli", "sinonimos": ["Árbol pequeño verde", "Verdura", "Sano", "Hervido"] },
-        { "base": "Tomate", "sinonimos": ["Rojo jugoso", "Ensalada", "Kétchup", "Salsa"] },
-        { "base": "Uva", "sinonimos": ["Racimo", "Morada o verde", "Vino", "Pequeña y redonda"] },
-        { "base": "Sandía", "sinonimos": ["Verde por fuera roja por dentro", "Agua", "Pesada", "Verano"] },
-        { "base": "Lechuga", "sinonimos": ["Hojas verdes", "Ensalada", "Crujiente", "Base de vegetales"] }
+        {
+          "base": "Manzana",
+          "sinonimos": [
+            "roja",
+            "árbol",
+            "dulce",
+            "gusano",
+            "verde"
+          ]
+        },
+        {
+          "base": "Plátano",
+          "sinonimos": [
+            "amarillo",
+            "mono",
+            "pelar",
+            "dulce",
+            "curvo"
+          ]
+        },
+        {
+          "base": "Naranja",
+          "sinonimos": [
+            "jugo",
+            "vitamina",
+            "gajos",
+            "cítrica",
+            "redonda"
+          ]
+        },
+        {
+          "base": "Fresa",
+          "sinonimos": [
+            "roja",
+            "semillas",
+            "dulce",
+            "crema",
+            "pequeña"
+          ]
+        },
+        {
+          "base": "Zanahoria",
+          "sinonimos": [
+            "naranja",
+            "conejo",
+            "crujiente",
+            "tierra",
+            "verdura"
+          ]
+        },
+        {
+          "base": "Brócoli",
+          "sinonimos": [
+            "verde",
+            "sano",
+            "árbol",
+            "hervido",
+            "verdura"
+          ]
+        },
+        {
+          "base": "Tomate",
+          "sinonimos": [
+            "rojo",
+            "ensalada",
+            "salsa",
+            "jugoso",
+            "kétchup"
+          ]
+        },
+        {
+          "base": "Uva",
+          "sinonimos": [
+            "racimo",
+            "morada",
+            "vino",
+            "dulce",
+            "pequeña"
+          ]
+        },
+        {
+          "base": "Sandía",
+          "sinonimos": [
+            "verano",
+            "roja",
+            "agua",
+            "grande",
+            "semillas"
+          ]
+        },
+        {
+          "base": "Lechuga",
+          "sinonimos": [
+            "hojas",
+            "ensalada",
+            "verde",
+            "crujiente",
+            "verdura"
+          ]
+        }
       ]
     },
     {
       "nombre": "Astronomía",
       "palabras": [
-        { "base": "Planeta", "sinonimos": ["Tierra", "Órbita", "Espacio", "Redondo enorme"] },
-        { "base": "Estrella", "sinonimos": ["Luz en la noche", "Cielo", "Brillo lejano", "Cinco puntas"] },
-        { "base": "Luna", "sinonimos": ["Satélite blanco", "Noche", "Cráteres", "Lobo"] },
-        { "base": "Sol", "sinonimos": ["Luz del día", "Calor", "Estrella gigante amarilla", "Centro del sistema"] },
-        { "base": "Galaxia", "sinonimos": ["Vía Láctea", "Millones de estrellas", "Espacio profundo", "Espiral"] },
-        { "base": "Telescopio", "sinonimos": ["Mirar de lejos", "Lentes", "Mirar al espacio", "Estrellas de cerca"] },
-        { "base": "Astronauta", "sinonimos": ["Traje espacial", "Viaje a la luna", "Gravedad cero", "Nave"] },
-        { "base": "Cometa", "sinonimos": ["Cola brillante", "Pasar rápido", "Roca de hielo", "Cielo nocturno"] },
-        { "base": "Marte", "sinonimos": ["Planeta rojo", "Vecino de la Tierra", "Alienígenas", "Robot explorador"] },
-        { "base": "Cohete", "sinonimos": ["Fuego abajo", "Despegar hacia arriba", "Ir al espacio", "Nave espacial cilíndrica"] }
+        {
+          "base": "Planeta",
+          "sinonimos": [
+            "tierra",
+            "órbita",
+            "espacio",
+            "redondo",
+            "sistema"
+          ]
+        },
+        {
+          "base": "Estrella",
+          "sinonimos": [
+            "brillo",
+            "cielo",
+            "noche",
+            "luz",
+            "lejos"
+          ]
+        },
+        {
+          "base": "Luna",
+          "sinonimos": [
+            "noche",
+            "cráter",
+            "blanca",
+            "satélite",
+            "llena"
+          ]
+        },
+        {
+          "base": "Sol",
+          "sinonimos": [
+            "calor",
+            "día",
+            "luz",
+            "amarillo",
+            "estrella"
+          ]
+        },
+        {
+          "base": "Galaxia",
+          "sinonimos": [
+            "vía láctea",
+            "estrellas",
+            "espacio",
+            "grande",
+            "espiral"
+          ]
+        },
+        {
+          "base": "Telescopio",
+          "sinonimos": [
+            "mirar",
+            "lejos",
+            "estrellas",
+            "lente",
+            "espacio"
+          ]
+        },
+        {
+          "base": "Astronauta",
+          "sinonimos": [
+            "espacio",
+            "traje",
+            "luna",
+            "nave",
+            "gravedad"
+          ]
+        },
+        {
+          "base": "Cometa",
+          "sinonimos": [
+            "cola",
+            "hielo",
+            "cielo",
+            "rápido",
+            "estrella"
+          ]
+        },
+        {
+          "base": "Marte",
+          "sinonimos": [
+            "rojo",
+            "planeta",
+            "tierra",
+            "explorador",
+            "vecino"
+          ]
+        },
+        {
+          "base": "Cohete",
+          "sinonimos": [
+            "despegar",
+            "espacio",
+            "fuego",
+            "nave",
+            "lanzar"
+          ]
+        }
       ]
     },
     {
       "nombre": "Muebles",
       "palabras": [
-        { "base": "Mesa", "sinonimos": ["Comer encima", "Cuatro patas", "Superficie plana", "Comedor"] },
-        { "base": "Silla", "sinonimos": ["Sentarse", "Respaldo", "Mesa", "Comedor"] },
-        { "base": "Armario", "sinonimos": ["Guardar ropa", "Puertas de madera", "Perchas", "Dormitorio"] },
-        { "base": "Estantería", "sinonimos": ["Libros", "Repisas", "Madera contra la pared", "Decoración"] },
-        { "base": "Sillón", "sinonimos": ["Sofá", "Descanso", "Una persona", "Sala de estar"] },
-        { "base": "Escritorio", "sinonimos": ["Estudiar", "Computadora encima", "Trabajo", "Cajones"] },
-        { "base": "Mesita de noche", "sinonimos": ["Junto a la cama", "Lámpara", "Despertador", "Dormitorio"] },
-        { "base": "Taburete", "sinonimos": ["Asiento sin respaldo", "Silla alta", "Bar", "Barra de cocina"] },
-        { "base": "Cajonera", "sinonimos": ["Mueble de cajones", "Guardar calcetines", "Tirar de la manija", "Dormitorio"] },
-        { "base": "Perchero", "sinonimos": ["Colgar abrigos", "Palo con ganchos", "Entrada de casa", "Sombreros"] }
+        {
+          "base": "Mesa",
+          "sinonimos": [
+            "comer",
+            "patas",
+            "superficie",
+            "comedor",
+            "madera"
+          ]
+        },
+        {
+          "base": "Silla",
+          "sinonimos": [
+            "sentarse",
+            "respaldo",
+            "mesa",
+            "comedor",
+            "asiento"
+          ]
+        },
+        {
+          "base": "Armario",
+          "sinonimos": [
+            "ropa",
+            "puertas",
+            "perchas",
+            "dormitorio",
+            "guardar"
+          ]
+        },
+        {
+          "base": "Estantería",
+          "sinonimos": [
+            "libros",
+            "repisas",
+            "pared",
+            "madera",
+            "decoración"
+          ]
+        },
+        {
+          "base": "Sillón",
+          "sinonimos": [
+            "descanso",
+            "sala",
+            "cómodo",
+            "sofá",
+            "relajarse"
+          ]
+        },
+        {
+          "base": "Escritorio",
+          "sinonimos": [
+            "trabajo",
+            "computadora",
+            "cajones",
+            "estudiar",
+            "oficina"
+          ]
+        },
+        {
+          "base": "Mesita de noche",
+          "sinonimos": [
+            "cama",
+            "lámpara",
+            "despertador",
+            "dormitorio",
+            "al lado"
+          ]
+        },
+        {
+          "base": "Taburete",
+          "sinonimos": [
+            "asiento",
+            "alto",
+            "bar",
+            "sin respaldo",
+            "cocina"
+          ]
+        },
+        {
+          "base": "Cajonera",
+          "sinonimos": [
+            "cajones",
+            "ropa",
+            "dormitorio",
+            "guardar",
+            "manija"
+          ]
+        },
+        {
+          "base": "Perchero",
+          "sinonimos": [
+            "colgar",
+            "abrigos",
+            "entrada",
+            "ganchos",
+            "sombreros"
+          ]
+        }
       ]
     },
     {
       "nombre": "Superpoderes",
       "palabras": [
-        { "base": "Vuelo", "sinonimos": ["Cielo", "Pájaro humano", "Gravedad cero", "Capa"] },
-        { "base": "Invisibilidad", "sinonimos": ["No poder ser visto", "Transparencia", "Esconderse mágico", "Desaparecer"] },
-        { "base": "Superfuerza", "sinonimos": ["Levantar coches", "Músculos invencibles", "Romper paredes", "Pesado"] },
-        { "base": "Telepatía", "sinonimos": ["Leer mentes", "Hablar con el pensamiento", "Cerebro", "Pensamientos de otro"] },
-        { "base": "Supervelocidad", "sinonimos": ["Correr rapidísimo", "Visto y no visto", "Más rápido que una bala", "Flash"] },
-        { "base": "Telequinesis", "sinonimos": ["Mover objetos con la mente", "Flotar cosas", "Poder mental", "Manos quietas"] },
-        { "base": "Control de Fuego", "sinonimos": ["Lanzar llamas", "Calor extremo", "Quemar", "Manos calientes"] },
-        { "base": "Control de Hielo", "sinonimos": ["Congelar", "Frío extremo", "Pista de hielo mágica", "Muñeco de nieve mágico"] },
-        { "base": "Curación", "sinonimos": ["Sanar heridas", "Poder sanador", "Salud instantánea", "Regeneración"] },
-        { "base": "Rayos X", "sinonimos": ["Ver a través de paredes", "Supervisión", "Radiografía en los ojos", "Mirada profunda"] }
+        {
+          "base": "Vuelo",
+          "sinonimos": [
+            "cielo",
+            "alas",
+            "volar",
+            "capa",
+            "aire"
+          ]
+        },
+        {
+          "base": "Invisibilidad",
+          "sinonimos": [
+            "esconderse",
+            "transparente",
+            "desaparecer",
+            "invisible",
+            "no ver"
+          ]
+        },
+        {
+          "base": "Superfuerza",
+          "sinonimos": [
+            "levantar",
+            "fuerte",
+            "romper",
+            "músculos",
+            "pesado"
+          ]
+        },
+        {
+          "base": "Telepatía",
+          "sinonimos": [
+            "mente",
+            "pensamientos",
+            "leer",
+            "comunicar",
+            "cerebro"
+          ]
+        },
+        {
+          "base": "Supervelocidad",
+          "sinonimos": [
+            "correr",
+            "rápido",
+            "flash",
+            "veloz",
+            "bala"
+          ]
+        },
+        {
+          "base": "Telequinesis",
+          "sinonimos": [
+            "mover",
+            "mente",
+            "flotar",
+            "objetos",
+            "poder"
+          ]
+        },
+        {
+          "base": "Control de Fuego",
+          "sinonimos": [
+            "llamas",
+            "quemar",
+            "calor",
+            "fuego",
+            "lanzar"
+          ]
+        },
+        {
+          "base": "Control de Hielo",
+          "sinonimos": [
+            "congelar",
+            "frío",
+            "hielo",
+            "nieve",
+            "congelado"
+          ]
+        },
+        {
+          "base": "Curación",
+          "sinonimos": [
+            "sanar",
+            "herida",
+            "regenerar",
+            "salud",
+            "cura"
+          ]
+        },
+        {
+          "base": "Rayos X",
+          "sinonimos": [
+            "ver",
+            "a través",
+            "paredes",
+            "radiografía",
+            "ojos"
+          ]
+        }
       ]
     },
     {
       "nombre": "Cuerpo Humano",
       "palabras": [
-        { "base": "Cerebro", "sinonimos": ["Pensar", "Cabeza adentro", "Ideas", "Materia gris"] },
-        { "base": "Corazón", "sinonimos": ["Latidos", "Pecho", "Sangre pump", "Órgano del amor"] },
-        { "base": "Ojo", "sinonimos": ["Ver", "Lágrima", "Pestañas", "Color del iris"] },
-        { "base": "Mano", "sinonimos": ["Cinco dedos", "Agarrar", "Uñas", "Palma"] },
-        { "base": "Pie", "sinonimos": ["Zapatos", "Caminar", "Dedos de abajo", "Tobillo"] },
-        { "base": "Pulmón", "sinonimos": ["Respirar", "Aire", "Pecho", "Oxígeno"] },
-        { "base": "Estómago", "sinonimos": ["Comer", "Barriga", "Hambre", "Digestión"] },
-        { "base": "Hueso", "sinonimos": ["Esqueleto", "Duro y blanco", "Fractura", "Soporte del cuerpo"] },
-        { "base": "Sangre", "sinonimos": ["Líquido rojo", "Venas", "Herida", "Corazón"] },
-        { "base": "Piel", "sinonimos": ["Tejido exterior", "Tocar", "Suave humana", "Moretón"] }
+        {
+          "base": "Cerebro",
+          "sinonimos": [
+            "pensar",
+            "cabeza",
+            "ideas",
+            "mente",
+            "gris"
+          ]
+        },
+        {
+          "base": "Corazón",
+          "sinonimos": [
+            "latidos",
+            "pecho",
+            "sangre",
+            "amor",
+            "bomba"
+          ]
+        },
+        {
+          "base": "Ojo",
+          "sinonimos": [
+            "ver",
+            "pestañas",
+            "iris",
+            "lágrima",
+            "mirar"
+          ]
+        },
+        {
+          "base": "Mano",
+          "sinonimos": [
+            "dedos",
+            "agarrar",
+            "palma",
+            "uña",
+            "mano"
+          ]
+        },
+        {
+          "base": "Pie",
+          "sinonimos": [
+            "caminar",
+            "dedos",
+            "tobillo",
+            "zapato",
+            "planta"
+          ]
+        },
+        {
+          "base": "Pulmón",
+          "sinonimos": [
+            "respirar",
+            "aire",
+            "oxígeno",
+            "pecho",
+            "inhalar"
+          ]
+        },
+        {
+          "base": "Estómago",
+          "sinonimos": [
+            "comer",
+            "barriga",
+            "hambre",
+            "digestión",
+            "comida"
+          ]
+        },
+        {
+          "base": "Hueso",
+          "sinonimos": [
+            "esqueleto",
+            "duro",
+            "fractura",
+            "soporte",
+            "blanco"
+          ]
+        },
+        {
+          "base": "Sangre",
+          "sinonimos": [
+            "roja",
+            "venas",
+            "herida",
+            "corazón",
+            "líquido"
+          ]
+        },
+        {
+          "base": "Piel",
+          "sinonimos": [
+            "cuerpo",
+            "tocar",
+            "suave",
+            "moretón",
+            "exterior"
+          ]
+        }
       ]
     },
     {
       "nombre": "Arte y Pintura",
       "palabras": [
-        { "base": "Cuadro", "sinonimos": ["Pintura en pared", "Marco", "Obra visual", "Museo"] },
-        { "base": "Pincel", "sinonimos": ["Pelo de animal en un palo", "Pintar finamente", "Trazos", "Acuarela"] },
-        { "base": "Lienzo", "sinonimos": ["Tela blanca", "Donde se pinta", "Bastidor", "Óleo"] },
-        { "base": "Paleta", "sinonimos": ["Madera con colores", "Mezclar pintura", "Mano del artista", "Agujero para el pulgar"] },
-        { "base": "Colores", "sinonimos": ["Rojo azul amarillo", "Pigmento", "Tubo de pintura", "Brillo visual"] },
-        { "base": "Museo", "sinonimos": ["Exposición de arte", "Cuadros antiguos", "Obras famosas", "Silencio y mirar"] },
-        { "base": "Escultura", "sinonimos": ["Arte en 3D", "Mármol o bronce", "Estatua", "Cincel"] },
-        { "base": "Dibujo", "sinonimos": ["Lápiz", "Boceto", "Papel", "Líneas de carbón"] },
-        { "base": "Acuarela", "sinonimos": ["Pintura con agua", "Colores transparentes", "Técnica aguada", "Pincel mojado"] },
-        { "base": "Exposición", "sinonimos": ["Galería", "Ver arte nuevo", "Paredes llenas de obras", "Inauguración"] }
+        {
+          "base": "Cuadro",
+          "sinonimos": [
+            "pintura",
+            "marco",
+            "museo",
+            "pared",
+            "obra"
+          ]
+        },
+        {
+          "base": "Pincel",
+          "sinonimos": [
+            "pintura",
+            "trazo",
+            "brocha",
+            "color",
+            "pintar"
+          ]
+        },
+        {
+          "base": "Lienzo",
+          "sinonimos": [
+            "tela",
+            "pintar",
+            "bastidor",
+            "óleo",
+            "blanco"
+          ]
+        },
+        {
+          "base": "Paleta",
+          "sinonimos": [
+            "colores",
+            "mezclar",
+            "pintura",
+            "artista",
+            "madera"
+          ]
+        },
+        {
+          "base": "Colores",
+          "sinonimos": [
+            "rojo",
+            "azul",
+            "amarillo",
+            "pigmento",
+            "pintura"
+          ]
+        },
+        {
+          "base": "Museo",
+          "sinonimos": [
+            "arte",
+            "cuadros",
+            "exposición",
+            "silencio",
+            "obras"
+          ]
+        },
+        {
+          "base": "Escultura",
+          "sinonimos": [
+            "estatua",
+            "mármol",
+            "cincel",
+            "3d",
+            "escultor"
+          ]
+        },
+        {
+          "base": "Dibujo",
+          "sinonimos": [
+            "lápiz",
+            "papel",
+            "boceto",
+            "líneas",
+            "dibujar"
+          ]
+        },
+        {
+          "base": "Acuarela",
+          "sinonimos": [
+            "agua",
+            "transparente",
+            "pincel",
+            "color",
+            "técnica"
+          ]
+        },
+        {
+          "base": "Exposición",
+          "sinonimos": [
+            "galería",
+            "obras",
+            "arte",
+            "inauguración",
+            "ver"
+          ]
+        }
       ]
     },
     {
       "nombre": "Insectos y Bichos",
       "palabras": [
-        { "base": "Mosca", "sinonimos": ["Bicho molesto volador", "Zumbido oscuro", "Basura", "Mata-insectos"] },
-        { "base": "Araña", "sinonimos": ["Ocho patas", "Telaraña", "Veneno", "Miedo"] },
-        { "base": "Hormiga", "sinonimos": ["Bicho pequeñito trabajador", "Fila en el suelo", "Azúcar", "Picadura roja"] },
-        { "base": "Mariposa", "sinonimos": ["Alas de colores", "Oruga transformada", "Primavera", "Flor"] },
-        { "base": "Abeja", "sinonimos": ["Miel", "Zumbido amarillo y negro", "Aguijón", "Polen"] },
-        { "base": "Escarabajo", "sinonimos": ["Caparazón duro", "Egipto", "Bicho que camina", "Pelota de tierra"] },
-        { "base": "Grillo", "sinonimos": ["Sonido de noche", "Cri cri", "Saltos", "Verde escondido"] },
-        { "base": "Mosquito", "sinonimos": ["Chupador de sangre", "Picadura que pica", "Volar en la oreja", "Zancudo"] },
-        { "base": "Mariquita", "sinonimos": ["Roja con puntos negros", "Bicho de la buena suerte", "Pequeña y vuela", "Hojas"] },
-        { "base": "Gusano", "sinonimos": ["Tierra", "Largo sin patas", "Manzana agujereada", "Húmedo"] }
+        {
+          "base": "Mosca",
+          "sinonimos": [
+            "zumbido",
+            "molesta",
+            "basura",
+            "volar",
+            "insecto"
+          ]
+        },
+        {
+          "base": "Araña",
+          "sinonimos": [
+            "telaraña",
+            "ocho patas",
+            "veneno",
+            "miedo",
+            "teje"
+          ]
+        },
+        {
+          "base": "Hormiga",
+          "sinonimos": [
+            "trabajadora",
+            "fila",
+            "azúcar",
+            "pequeña",
+            "insecto"
+          ]
+        },
+        {
+          "base": "Mariposa",
+          "sinonimos": [
+            "alas",
+            "colorida",
+            "oruga",
+            "flor",
+            "primavera"
+          ]
+        },
+        {
+          "base": "Abeja",
+          "sinonimos": [
+            "miel",
+            "zumbido",
+            "aguijón",
+            "polen",
+            "amarilla"
+          ]
+        },
+        {
+          "base": "Escarabajo",
+          "sinonimos": [
+            "caparazón",
+            "duro",
+            "caminar",
+            "insecto",
+            "egipto"
+          ]
+        },
+        {
+          "base": "Grillo",
+          "sinonimos": [
+            "cri cri",
+            "noche",
+            "salto",
+            "sonido",
+            "verde"
+          ]
+        },
+        {
+          "base": "Mosquito",
+          "sinonimos": [
+            "picadura",
+            "sangre",
+            "zumbido",
+            "oreja",
+            "zancudo"
+          ]
+        },
+        {
+          "base": "Mariquita",
+          "sinonimos": [
+            "puntos",
+            "roja",
+            "suerte",
+            "pequeña",
+            "volar"
+          ]
+        },
+        {
+          "base": "Gusano",
+          "sinonimos": [
+            "tierra",
+            "largo",
+            "manzana",
+            "húmedo",
+            "sin patas"
+          ]
+        }
       ]
     },
     {
       "nombre": "Clima",
       "palabras": [
-        { "base": "Lluvia", "sinonimos": ["Agua del cielo", "Gotas", "Paraguas", "Nubes grises"] },
-        { "base": "Nieve", "sinonimos": ["Blanco y frío", "Copos", "Invierno", "Muñeco de hielo"] },
-        { "base": "Viento", "sinonimos": ["Aire fuerte", "Hojas volando", "Frío en la cara", "Huracán pequeño"] },
-        { "base": "Tormenta", "sinonimos": ["Agua y viento juntos", "Truenos", "Cielo oscuro", "No salir de casa"] },
-        { "base": "Sol", "sinonimos": ["Calor", "Cielo azul", "Día soleado", "Bronceado"] },
-        { "base": "Nube", "sinonimos": ["Algodón en el cielo", "Color blanco o gris", "Tapa el sol", "Formas en el cielo"] },
-        { "base": "Rayo", "sinonimos": ["Luz en la tormenta", "Trueno", "Electricidad del cielo", "Destello rápido"] },
-        { "base": "Niebla", "sinonimos": ["Nube baja", "No ver lejos", "Blanco tenue", "Conducir despacio"] },
-        { "base": "Arcoíris", "sinonimos": ["Siete colores en el cielo", "Después de la lluvia", "Mágico", "Curva colorida"] },
-        { "base": "Granizo", "sinonimos": ["Hielo cayendo", "Piedras frías del cielo", "Lluvia dura", "Rompe cosas"] }
+        {
+          "base": "Lluvia",
+          "sinonimos": [
+            "gotas",
+            "paraguas",
+            "nubes",
+            "agua",
+            "mojar"
+          ]
+        },
+        {
+          "base": "Nieve",
+          "sinonimos": [
+            "blanca",
+            "fría",
+            "copos",
+            "invierno",
+            "muñeco"
+          ]
+        },
+        {
+          "base": "Viento",
+          "sinonimos": [
+            "aire",
+            "hojas",
+            "fuerte",
+            "frío",
+            "soplar"
+          ]
+        },
+        {
+          "base": "Tormenta",
+          "sinonimos": [
+            "trueno",
+            "rayo",
+            "oscuro",
+            "lluvia",
+            "viento"
+          ]
+        },
+        {
+          "base": "Sol",
+          "sinonimos": [
+            "calor",
+            "azul",
+            "día",
+            "bronceado",
+            "luz"
+          ]
+        },
+        {
+          "base": "Nube",
+          "sinonimos": [
+            "blanca",
+            "cielo",
+            "algodón",
+            "gris",
+            "sol"
+          ]
+        },
+        {
+          "base": "Rayo",
+          "sinonimos": [
+            "trueno",
+            "tormenta",
+            "luz",
+            "eléctrico",
+            "destello"
+          ]
+        },
+        {
+          "base": "Niebla",
+          "sinonimos": [
+            "baja",
+            "blanca",
+            "no ver",
+            "húmeda",
+            "conducir"
+          ]
+        },
+        {
+          "base": "Arcoíris",
+          "sinonimos": [
+            "colores",
+            "lluvia",
+            "cielo",
+            "siete",
+            "mágico"
+          ]
+        },
+        {
+          "base": "Granizo",
+          "sinonimos": [
+            "hielo",
+            "piedras",
+            "frío",
+            "lluvia",
+            "duro"
+          ]
+        }
       ]
     },
     {
       "nombre": "Instrumentos Médicos",
       "palabras": [
-        { "base": "Jeringa", "sinonimos": ["Inyección", "Aguja", "Vacuna", "Pinchazo doloroso"] },
-        { "base": "Estetoscopio", "sinonimos": ["Escuchar corazón", "Colgado al cuello del doctor", "Latidos", "Respiración"] },
-        { "base": "Bisturí", "sinonimos": ["Cuchillo quirúrgico", "Operación", "Corte exacto", "Sala de cirugía"] },
-        { "base": "Termómetro", "sinonimos": ["Medir temperatura", "Fiebre", "Boca o axila", "Grados de calor"] },
-        { "base": "Venda", "sinonimos": ["Cubrir herida", "Rollo de tela médica", "Gasa", "Curación"] },
-        { "base": "Camilla", "sinonimos": ["Cama con ruedas", "Ambulancia", "Mover herido", "Urgencias"] },
-        { "base": "Silla de ruedas", "sinonimos": ["Asiento que rueda", "Piernas rotas", "Discapacidad empujar", "Ruedas grandes"] },
-        { "base": "Radiografía", "sinonimos": ["Foto a los huesos", "Rayos X", "Placa negra", "Ver esqueleto"] },
-        { "base": "Suero", "sinonimos": ["Bolsa de líquido a la vena", "Hidratación", "Tubo de plástico", "Postrado en cama"] },
-        { "base": "Guantes de Látex", "sinonimos": ["Manos del doctor protegidas", "Goma elástica", "Blanco plástico", "Evitar infección"] }
+        {
+          "base": "Jeringa",
+          "sinonimos": [
+            "inyección",
+            "aguja",
+            "vacuna",
+            "pinchazo",
+            "medicamento"
+          ]
+        },
+        {
+          "base": "Estetoscopio",
+          "sinonimos": [
+            "corazón",
+            "latidos",
+            "doctor",
+            "escuchar",
+            "pecho"
+          ]
+        },
+        {
+          "base": "Bisturí",
+          "sinonimos": [
+            "corte",
+            "cirugía",
+            "cuchillo",
+            "operación",
+            "preciso"
+          ]
+        },
+        {
+          "base": "Termómetro",
+          "sinonimos": [
+            "temperatura",
+            "fiebre",
+            "calor",
+            "medir",
+            "boca"
+          ]
+        },
+        {
+          "base": "Venda",
+          "sinonimos": [
+            "herida",
+            "gasa",
+            "cubrir",
+            "curación",
+            "rollo"
+          ]
+        },
+        {
+          "base": "Camilla",
+          "sinonimos": [
+            "herido",
+            "ruedas",
+            "ambulancia",
+            "urgencias",
+            "mover"
+          ]
+        },
+        {
+          "base": "Silla de ruedas",
+          "sinonimos": [
+            "movilidad",
+            "ruedas",
+            "discapacidad",
+            "sentarse",
+            "empujar"
+          ]
+        },
+        {
+          "base": "Radiografía",
+          "sinonimos": [
+            "huesos",
+            "rayos x",
+            "foto",
+            "esqueleto",
+            "placa"
+          ]
+        },
+        {
+          "base": "Suero",
+          "sinonimos": [
+            "vena",
+            "líquido",
+            "hidratación",
+            "bolsa",
+            "gota"
+          ]
+        },
+        {
+          "base": "Guantes de Látex",
+          "sinonimos": [
+            "doctor",
+            "manos",
+            "protección",
+            "infección",
+            "goma"
+          ]
+        }
       ]
     },
     {
       "nombre": "Juegos de Mesa",
       "palabras": [
-        { "base": "Dados", "sinonimos": ["Cubo con puntos", "Lanzar al azar", "Seis caras", "Suerte"] },
-        { "base": "Tablero", "sinonimos": ["Cartón grande del juego", "Casillas", "Caminos dibujados", "Base del juego"] },
-        { "base": "Cartas", "sinonimos": ["Baraja", "Naipes", "Repartir manos", "As y Rey"] },
-        { "base": "Fichas", "sinonimos": ["Piezas de colores", "Mover", "Plástico pequeño", "Representa al jugador"] },
-        { "base": "Ajedrez", "sinonimos": ["Rey y reina", "Guerra mental blanco y negro", "Peones", "Jaque mate"] },
-        { "base": "Dominó", "sinonimos": ["Puntos blancos en fondo negro", "Cadenas", "Empatar números", "Pieza rectangular"] },
-        { "base": "Rompecabezas", "sinonimos": ["Piezas encajables", "Armar la imagen", "Paciencia", "Bordes primero"] },
-        { "base": "Bingo", "sinonimos": ["Gritar victoria", "Números rodando", "Cartón y marcadores", "Bolillero"] },
-        { "base": "Monopoly", "sinonimos": ["Comprar casas y hoteles", "Dinero de juguete", "Cárcel", "Propiedades"] },
-        { "base": "Ruleta", "sinonimos": ["Rodar la bolita", "Números y colores", "Casino", "Hagan sus apuestas"] }
+        {
+          "base": "Dados",
+          "sinonimos": [
+            "cubo",
+            "puntos",
+            "lanzar",
+            "azar",
+            "seis"
+          ]
+        },
+        {
+          "base": "Tablero",
+          "sinonimos": [
+            "casillas",
+            "juego",
+            "cartón",
+            "caminos",
+            "base"
+          ]
+        },
+        {
+          "base": "Cartas",
+          "sinonimos": [
+            "baraja",
+            "naipes",
+            "repartir",
+            "mano",
+            "rey"
+          ]
+        },
+        {
+          "base": "Fichas",
+          "sinonimos": [
+            "piezas",
+            "colores",
+            "mover",
+            "jugador",
+            "plástico"
+          ]
+        },
+        {
+          "base": "Ajedrez",
+          "sinonimos": [
+            "rey",
+            "reina",
+            "peones",
+            "jaque",
+            "tablero"
+          ]
+        },
+        {
+          "base": "Dominó",
+          "sinonimos": [
+            "puntos",
+            "cadena",
+            "números",
+            "rectangular",
+            "empatar"
+          ]
+        },
+        {
+          "base": "Rompecabezas",
+          "sinonimos": [
+            "piezas",
+            "armar",
+            "imagen",
+            "paciencia",
+            "bordes"
+          ]
+        },
+        {
+          "base": "Bingo",
+          "sinonimos": [
+            "números",
+            "cartón",
+            "ganar",
+            "bolillero",
+            "línea"
+          ]
+        },
+        {
+          "base": "Monopoly",
+          "sinonimos": [
+            "casas",
+            "dinero",
+            "propiedades",
+            "cárcel",
+            "hoteles"
+          ]
+        },
+        {
+          "base": "Ruleta",
+          "sinonimos": [
+            "bolita",
+            "números",
+            "colores",
+            "apuestas",
+            "casino"
+          ]
+        }
       ]
     },
     {
       "nombre": "Mitos y Leyendas",
       "palabras": [
-        { "base": "Dragón", "sinonimos": ["Lagartija voladora gigante", "Escupe fuego", "Castillo y tesoro", "Escamas"] },
-        { "base": "Sirena", "sinonimos": ["Mitad pez mitad mujer", "Canto en el mar", "Rocas", "Marineros perdidos"] },
-        { "base": "Unicornio", "sinonimos": ["Caballo blanco", "Cuerno en la frente", "Magia", "Arcoíris pálido"] },
-        { "base": "Minotauro", "sinonimos": ["Cabeza de toro", "Cuerpo humano enorme", "Laberinto oscuro", "Monstruo cruel"] },
-        { "base": "Pegaso", "sinonimos": ["Caballo con alas volador", "Blanco celestial", "Grecia", "Corcel mágico"] },
-        { "base": "Medusa", "sinonimos": ["Cabello de serpientes venenosas", "Mirada de piedra", "Monstruo griego femenino", "Mirar el reflejo"] },
-        { "base": "Hombre Lobo", "sinonimos": ["Aullido fuerte a luna llena", "Peludo feroz noche", "Mordida", "Balas de plata"] },
-        { "base": "Fénix", "sinonimos": ["Pájaro de fuego puro", "Renacer de las cenizas oscuras", "Lágrimas que curan místico", "Inmortal"] },
-        { "base": "Centauro", "sinonimos": ["Mitad hombre mitad caballo patas", "Arco y flechas", "Bosque antiguo", "Velocidad"] },
-        { "base": "Vampiro", "sinonimos": ["Dientes afilados chupadores", "Sangre cuello", "Sol hace daño", "Drácula"] }
+        {
+          "base": "Dragón",
+          "sinonimos": [
+            "fuego",
+            "alas",
+            "escamas",
+            "tesoro",
+            "volar"
+          ]
+        },
+        {
+          "base": "Sirena",
+          "sinonimos": [
+            "mar",
+            "canto",
+            "pez",
+            "roca",
+            "marina"
+          ]
+        },
+        {
+          "base": "Unicornio",
+          "sinonimos": [
+            "cuerno",
+            "caballo",
+            "magia",
+            "blanco",
+            "arcoíris"
+          ]
+        },
+        {
+          "base": "Minotauro",
+          "sinonimos": [
+            "toro",
+            "laberinto",
+            "monstruo",
+            "cabeza",
+            "griego"
+          ]
+        },
+        {
+          "base": "Pegaso",
+          "sinonimos": [
+            "alas",
+            "caballo",
+            "volar",
+            "blanco",
+            "mito"
+          ]
+        },
+        {
+          "base": "Medusa",
+          "sinonimos": [
+            "serpientes",
+            "piedra",
+            "mirada",
+            "cabello",
+            "monstruo"
+          ]
+        },
+        {
+          "base": "Hombre Lobo",
+          "sinonimos": [
+            "luna",
+            "aullido",
+            "peludo",
+            "noche",
+            "mordida"
+          ]
+        },
+        {
+          "base": "Fénix",
+          "sinonimos": [
+            "fuego",
+            "renacer",
+            "cenizas",
+            "pájaro",
+            "inmortal"
+          ]
+        },
+        {
+          "base": "Centauro",
+          "sinonimos": [
+            "caballo",
+            "hombre",
+            "arco",
+            "mitad",
+            "bosque"
+          ]
+        },
+        {
+          "base": "Vampiro",
+          "sinonimos": [
+            "sangre",
+            "dientes",
+            "noche",
+            "sol",
+            "drácula"
+          ]
+        }
       ]
     },
     {
       "nombre": "Ropa de Invierno",
       "palabras": [
-        { "base": "Abrigo", "sinonimos": ["Chaqueta gruesa gigante", "Largo y calentito polar", "Nieve exterior extrema", "Cubrir todo"] },
-        { "base": "Gorro", "sinonimos": ["Lana en la cabeza", "Proteger orejas frías", "Pompon", "Invierno cabeza"] },
-        { "base": "Bufanda", "sinonimos": ["Tela larga cuello caliente", "Enrollable", "Tejido", "Abriga garganta profunda"] },
-        { "base": "Guantes", "sinonimos": ["Dedos calentitos tela", "Manos protegidas frío", "Nieve agarre", "Lana"] },
-        { "base": "Botas", "sinonimos": ["Calzado alto fuerte", "Nieve paso seguro", "Pies calientes cerrados", "Pisar fango rudo"] },
-        { "base": "Suéter", "sinonimos": ["Chompa", "Sudadera tejida cálida", "Lana torso abrigo", "Manga larga"] },
-        { "base": "Orejeras", "sinonimos": ["Cubrir lados de cabeza frío", "Diadema calentita orejas", "Peluche", "Invierno sonoro"] },
-        { "base": "Calcetines Térmicos", "sinonimos": ["Pies muy calientes algodón", "Medias gruesas", "Bota debajo interno", "Frío cero"] },
-        { "base": "Pasamontañas", "sinonimos": ["Cubre toda la cara cabeza", "Casi solo ojos", "Nieve extrema frío", "Robo (chiste)"] },
-        { "base": "Chaqueta Cortavientos", "sinonimos": ["Sella el aire fuerte", "Impermeable ligero cálido", "Cremallera", "Capucha"] }
+        {
+          "base": "Abrigo",
+          "sinonimos": [
+            "grueso",
+            "frío",
+            "largo",
+            "invierno",
+            "caliente"
+          ]
+        },
+        {
+          "base": "Gorro",
+          "sinonimos": [
+            "lana",
+            "cabeza",
+            "orejas",
+            "pompon",
+            "frío"
+          ]
+        },
+        {
+          "base": "Bufanda",
+          "sinonimos": [
+            "cuello",
+            "lana",
+            "enrollar",
+            "caliente",
+            "invierno"
+          ]
+        },
+        {
+          "base": "Guantes",
+          "sinonimos": [
+            "manos",
+            "lana",
+            "dedos",
+            "frío",
+            "nieve"
+          ]
+        },
+        {
+          "base": "Botas",
+          "sinonimos": [
+            "pies",
+            "nieve",
+            "calientes",
+            "altas",
+            "impermeables"
+          ]
+        },
+        {
+          "base": "Suéter",
+          "sinonimos": [
+            "lana",
+            "cálido",
+            "mangas",
+            "invierno",
+            "tejido"
+          ]
+        },
+        {
+          "base": "Orejeras",
+          "sinonimos": [
+            "orejas",
+            "frío",
+            "diadema",
+            "lana",
+            "calientes"
+          ]
+        },
+        {
+          "base": "Calcetines Térmicos",
+          "sinonimos": [
+            "pies",
+            "calientes",
+            "gruesos",
+            "lana",
+            "invierno"
+          ]
+        },
+        {
+          "base": "Pasamontañas",
+          "sinonimos": [
+            "cara",
+            "cabeza",
+            "frío",
+            "ojos",
+            "lana"
+          ]
+        },
+        {
+          "base": "Chaqueta Cortavientos",
+          "sinonimos": [
+            "viento",
+            "impermeable",
+            "capucha",
+            "ligera",
+            "frío"
+          ]
+        }
       ]
     },
     {
       "nombre": "Objetos de Playa",
       "palabras": [
-        { "base": "Arena", "sinonimos": ["Grano diminuto dorado", "Pisar caliente sol", "Castillo construir", "Se mete por todo"] },
-        { "base": "Toalla", "sinonimos": ["Tela recostarse", "Secarse del agua grande", "Tumbarse al sol", "Rectangle"] },
-        { "base": "Sombrilla", "sinonimos": ["Sombra portátil grande", "Palo clavado en arena", "Paraguas de colores enorme", "Evitar quemarse"] },
-        { "base": "Bloqueador", "sinonimos": ["Crema blanca piel quemar", "Protección solar untar", "No quedar rojo ardiente", "Olor a playa"] },
-        { "base": "Traje de Baño", "sinonimos": ["Ropa mojarse", "Bikini o bañador corto", "Meterse al mar tela", "Agua"] },
-        { "base": "Pelota de Playa", "sinonimos": ["Balón inflable colores rayas", "Voleibol aire ligero", "Golpear manos agua", "Rueda arena"] },
-        { "base": "Gafas de Buceo", "sinonimos": ["Mirar bajo el agua ojos", "Vidrio tubo respirar", "Ver peces fondo mar", "Bucear"] },
-        { "base": "Castillo de Arena", "sinonimos": ["Construcción niños mojada", "Cubo y pala forma", "Olas destruyen final", "Torres"] },
-        { "base": "Cubo y Pala", "sinonimos": ["Juguete de plástico niños", "Cavar hoyo", "Hacer formas", "Balde"] },
-        { "base": "Tabla de Surf", "sinonimos": ["Pararse en olas grandes", "Madera flota rápido", "Deporte extremo mar", "Remar acostado"] }
+        {
+          "base": "Arena",
+          "sinonimos": [
+            "playa",
+            "grano",
+            "castillo",
+            "caliente",
+            "pie"
+          ]
+        },
+        {
+          "base": "Toalla",
+          "sinonimos": [
+            "secar",
+            "playa",
+            "tumbarse",
+            "arena",
+            "sol"
+          ]
+        },
+        {
+          "base": "Sombrilla",
+          "sinonimos": [
+            "sombra",
+            "playa",
+            "palo",
+            "sol",
+            "colores"
+          ]
+        },
+        {
+          "base": "Bloqueador",
+          "sinonimos": [
+            "protección",
+            "solar",
+            "crema",
+            "piel",
+            "quemadura"
+          ]
+        },
+        {
+          "base": "Traje de Baño",
+          "sinonimos": [
+            "baño",
+            "agua",
+            "mar",
+            "bikini",
+            "nadar"
+          ]
+        },
+        {
+          "base": "Pelota de Playa",
+          "sinonimos": [
+            "inflable",
+            "jugar",
+            "arena",
+            "colores",
+            "voleibol"
+          ]
+        },
+        {
+          "base": "Gafas de Buceo",
+          "sinonimos": [
+            "bucear",
+            "agua",
+            "peces",
+            "ver",
+            "mar"
+          ]
+        },
+        {
+          "base": "Castillo de Arena",
+          "sinonimos": [
+            "arena",
+            "niños",
+            "cubo",
+            "pala",
+            "playa"
+          ]
+        },
+        {
+          "base": "Cubo y Pala",
+          "sinonimos": [
+            "arena",
+            "jugar",
+            "niños",
+            "castillo",
+            "playa"
+          ]
+        },
+        {
+          "base": "Tabla de Surf",
+          "sinonimos": [
+            "ola",
+            "surf",
+            "mar",
+            "equilibrio",
+            "deporte"
+          ]
+        }
       ]
     },
     {
       "nombre": "Deportes Extremos",
       "palabras": [
-        { "base": "Paracaidismo", "sinonimos": ["Saltar avión cielo abierto", "Volar tela gigante abrir", "Caída libre rápida", "Adrenalina pura"] },
-        { "base": "Surf", "sinonimos": ["Olas grandes tabla", "Equilibrio mar bravo", "Tubo de agua", "Playa extrema"] },
-        { "base": "Escalada", "sinonimos": ["Subir roca vertical pared", "Cuerda y arnés manos", "Pico montaña fuerza", "Agarraderas"] },
-        { "base": "Snowboard", "sinonimos": ["Nieve tabla bajar rápido", "Nieve estilo libre", "Tabla colina blanca", "Patines hielo"] },
-        { "base": "Motocross", "sinonimos": ["Moto saltos tierra lodo", "Ruedas todo terreno ruido", "Carrera sucia piruetas", "Motor"] },
-        { "base": "Bungee Jumping", "sinonimos": ["Saltar puente elástico", "Cuerda tobillos volar hacia abajo", "Rebote adrenalina", "Grito"] },
-        { "base": "Skateboard", "sinonimos": ["Patineta ciudad cemento", "Trucos rampas ruedas", "Tabla girar saltar", "Parque"] },
-        { "base": "Rafting", "sinonimos": ["Río turbulento bote plástico", "Remar grupo olas", "Agua blanca rápidos", "Balsa ligera"] },
-        { "base": "Parkour", "sinonimos": ["Saltar paredes ciudad libre", "Acrobacia urbano", "Techos brincar cuerpo", "Gimnasia callejera"] },
-        { "base": "Buceo", "sinonimos": ["Fondo mar profundo", "Tanque oxígeno peces", "Traje neopreno oscuro", "Bajo el agua respirar"] }
+        {
+          "base": "Paracaidismo",
+          "sinonimos": [
+            "saltar",
+            "avión",
+            "caída",
+            "paracaídas",
+            "adrenalina"
+          ]
+        },
+        {
+          "base": "Surf",
+          "sinonimos": [
+            "ola",
+            "tabla",
+            "mar",
+            "equilibrio",
+            "playa"
+          ]
+        },
+        {
+          "base": "Escalada",
+          "sinonimos": [
+            "roca",
+            "pared",
+            "cuerda",
+            "montaña",
+            "subir"
+          ]
+        },
+        {
+          "base": "Snowboard",
+          "sinonimos": [
+            "nieve",
+            "tabla",
+            "bajar",
+            "montaña",
+            "invierno"
+          ]
+        },
+        {
+          "base": "Motocross",
+          "sinonimos": [
+            "moto",
+            "tierra",
+            "salto",
+            "lodo",
+            "carrera"
+          ]
+        },
+        {
+          "base": "Bungee Jumping",
+          "sinonimos": [
+            "saltar",
+            "cuerda",
+            "puente",
+            "rebote",
+            "adrenalina"
+          ]
+        },
+        {
+          "base": "Skateboard",
+          "sinonimos": [
+            "patineta",
+            "trucos",
+            "rampa",
+            "cemento",
+            "ruedas"
+          ]
+        },
+        {
+          "base": "Rafting",
+          "sinonimos": [
+            "río",
+            "bote",
+            "agua",
+            "remar",
+            "rápidos"
+          ]
+        },
+        {
+          "base": "Parkour",
+          "sinonimos": [
+            "saltar",
+            "paredes",
+            "ciudad",
+            "acrobacia",
+            "correr"
+          ]
+        },
+        {
+          "base": "Buceo",
+          "sinonimos": [
+            "mar",
+            "tanque",
+            "peces",
+            "profundo",
+            "oxígeno"
+          ]
+        }
       ]
     },
     {
       "nombre": "Dulces y Postres",
       "palabras": [
-        { "base": "Pastel", "sinonimos": ["Torta cumpleaños velas", "Bizcocho decorado rico", "Rebanada dulce", "Fiesta"] },
-        { "base": "Caramelo", "sinonimos": ["Pequeño chupete duro", "Dulce plástico envoltorio", "Azúcar", "Bolsillo"] },
-        { "base": "Galleta", "sinonimos": ["Horneado crujiente chip", "Masa chispas chocolate", "Leche mojar", "Merienda redonda"] },
-        { "base": "Chocolate", "sinonimos": ["Tableta marrón cacao", "Derretido delicioso", "Bombón negro", "Tableta derretir"] },
-        { "base": "Gelatina", "sinonimos": ["Postre tembloroso colores", "Transparente frutal mover", "Infancia cuchara", "Frío y suave"] },
-        { "base": "Flan", "sinonimos": ["Huevos caramelo arriba oscuro", "Postre amarillo temblar", "Horneado", "Dulce latino"] },
-        { "base": "Algodón de Azúcar", "sinonimos": ["Nube rosa feria circo", "Palo dulce gigante", "Se deshace en boca suave", "Azúcar hilado"] },
-        { "base": "Gominola", "sinonimos": ["Dulce de goma blandito", "Gusano colores morder", "Azúcar elástica", "Osito"] },
-        { "base": "Churros", "sinonimos": ["Masa frita alargada azúcar", "Chocolate caliente mojar", "Crujiente exterior", "Espiral"] },
-        { "base": "Donas", "sinonimos": ["Rosquilla frita agujero", "Glaseado colores", "Homero Simpson dulce", "Panadería circular redonda"] }
+        {
+          "base": "Pastel",
+          "sinonimos": [
+            "cumpleaños",
+            "velas",
+            "torta",
+            "rebanada",
+            "dulce"
+          ]
+        },
+        {
+          "base": "Caramelo",
+          "sinonimos": [
+            "chupar",
+            "dulce",
+            "duro",
+            "envoltorio",
+            "azúcar"
+          ]
+        },
+        {
+          "base": "Galleta",
+          "sinonimos": [
+            "chocolate",
+            "crujiente",
+            "leche",
+            "horneada",
+            "chip"
+          ]
+        },
+        {
+          "base": "Chocolate",
+          "sinonimos": [
+            "cacao",
+            "tableta",
+            "derretido",
+            "dulce",
+            "bombón"
+          ]
+        },
+        {
+          "base": "Gelatina",
+          "sinonimos": [
+            "temblorosa",
+            "fruta",
+            "color",
+            "postre",
+            "frío"
+          ]
+        },
+        {
+          "base": "Flan",
+          "sinonimos": [
+            "caramelo",
+            "huevos",
+            "temblar",
+            "postre",
+            "dulce"
+          ]
+        },
+        {
+          "base": "Algodón de Azúcar",
+          "sinonimos": [
+            "nube",
+            "rosa",
+            "feria",
+            "dulce",
+            "palo"
+          ]
+        },
+        {
+          "base": "Gominola",
+          "sinonimos": [
+            "goma",
+            "dulce",
+            "osito",
+            "morder",
+            "color"
+          ]
+        },
+        {
+          "base": "Churros",
+          "sinonimos": [
+            "fritos",
+            "azúcar",
+            "chocolate",
+            "masa",
+            "calientes"
+          ]
+        },
+        {
+          "base": "Donas",
+          "sinonimos": [
+            "glaseado",
+            "frita",
+            "agujero",
+            "rosquilla",
+            "dulce"
+          ]
+        }
       ]
     },
     {
       "nombre": "Juguetes",
       "palabras": [
-        { "base": "Muñeca", "sinonimos": ["Figura niña jugar", "Peinar jugar", "Barbie o trapo tela", "Cochecito vestir"] },
-        { "base": "Pelota", "sinonimos": ["Redonda goma patear", "Rebotar deportes calle", "Bota y rueda lejos", "Globo inflado"] },
-        { "base": "Rompecabezas", "sinonimos": ["Piezas encajar cartón", "Armar dibujo plano mesas", "Paciencia 1000 piezas", "Bordes unir"] },
-        { "base": "Oso de Peluche", "sinonimos": ["Peludito abrazo suave relleno", "Animal tela niños dormir", "Ternura regalar", "Mullidito algodón"] },
-        { "base": "Bloques de Acción", "sinonimos": ["Lego armar plástico torre", "Construcción colores formas unir", "Piezas pequeñas encajan duro", "Casas falsas torre"] },
-        { "base": "Carrito", "sinonimos": ["Vehículo chiquito jugar pista", "Hot wheels empujar mano", "Ruedas chocar niños", "Pistitas plástico"] },
-        { "base": "Yoyo", "sinonimos": ["Disco hilo cuerda subir bajar", "Girar mano truco dormirlo", "Círculo enrollar", "Juguete antiguo de madera"] },
-        { "base": "Trompo", "sinonimos": ["Madera girar cuerda lanza", "Bailar suelo punta de metal", "Púa colores dar vueltas", "Enrollar y tirar piso"] },
-        { "base": "Cometa", "sinonimos": ["Volar viento cielo hilo tela", "Papalote", "Cola larga parque", "Correr soltar arriba nube"] },
-        { "base": "Consola Portátil", "sinonimos": ["Videojuego manos pantalla botones", "Gameboy Switch jugar viajes", "Batería juegos cartuchos chiquito", "Nintendo"] }
+        {
+          "base": "Muñeca",
+          "sinonimos": [
+            "niña",
+            "peinar",
+            "vestir",
+            "barbie",
+            "jugar"
+          ]
+        },
+        {
+          "base": "Pelota",
+          "sinonimos": [
+            "rebotar",
+            "patear",
+            "jugar",
+            "redonda",
+            "goma"
+          ]
+        },
+        {
+          "base": "Rompecabezas",
+          "sinonimos": [
+            "piezas",
+            "armar",
+            "imagen",
+            "paciencia",
+            "cartón"
+          ]
+        },
+        {
+          "base": "Oso de Peluche",
+          "sinonimos": [
+            "abrazo",
+            "peludo",
+            "dormir",
+            "suave",
+            "juguete"
+          ]
+        },
+        {
+          "base": "Bloques de Construcción",
+          "sinonimos": [
+            "construir",
+            "lego",
+            "torre",
+            "piezas",
+            "colores"
+          ]
+        },
+        {
+          "base": "Carrito",
+          "sinonimos": [
+            "ruedas",
+            "empujar",
+            "pista",
+            "jugar",
+            "coche"
+          ]
+        },
+        {
+          "base": "Yoyo",
+          "sinonimos": [
+            "hilo",
+            "subir",
+            "bajar",
+            "girar",
+            "truco"
+          ]
+        },
+        {
+          "base": "Trompo",
+          "sinonimos": [
+            "girar",
+            "cuerda",
+            "madera",
+            "punta",
+            "bailar"
+          ]
+        },
+        {
+          "base": "Cometa",
+          "sinonimos": [
+            "volar",
+            "viento",
+            "hilo",
+            "cielo",
+            "papalote"
+          ]
+        },
+        {
+          "base": "Consola Portátil",
+          "sinonimos": [
+            "videojuego",
+            "pantalla",
+            "botones",
+            "viaje",
+            "jugar"
+          ]
+        }
       ]
     }
   ]
